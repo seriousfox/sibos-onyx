@@ -13,5 +13,7 @@ gem 'bourbon'
 gem 'sass'
 gem 'neat'
 gem 'shotgun'
+gem 'rb-fsevent'
+gem 'guard-livereload'
 
 gem 'heroku-deflater', :group => :production
