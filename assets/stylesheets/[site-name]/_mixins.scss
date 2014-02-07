@@ -7,6 +7,17 @@
       }
 }
 
+@mixin padded-container {
+  @include clearfix;
+  max-width: $max-width;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
 
 @mixin default-spacing {
   h1 {
