@@ -1,0 +1,32 @@
+@mixin col($col-no, $shift-no, $media, $drop-to, $shift-to) {
+  @include span-columns($col-no);
+      @include shift($shift-no);
+      @include media($media) {
+        @include span-columns($drop-to);
+        @include shift($shift-to);
+      }
+}
+
+
+@mixin default-spacing {
+  h1 {
+    padding-bottom: 40px;
+  }
+
+  h2 {
+    padding-bottom: 30px;
+  }
+
+  h3 {
+    padding-bottom: 20px;
+  }
+
+  h4 {
+    padding-bottom: 20px;
+  }
+
+  p {
+    padding-bottom: 20px;
+  }
+
+}

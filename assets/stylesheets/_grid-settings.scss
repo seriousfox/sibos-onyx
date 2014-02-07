@@ -11,10 +11,3 @@ $visual-grid: true;
 $tablet: new-breakpoint(max-width 768px 9);
 $phone: new-breakpoint(max-width 580px 6);
 $iphone: new-breakpoint(max-width 340px 3);
-
-@mixin col($col-no) {
-	@include span-columns($col-no);
-	@include media ($tablet) {
-		@include span-columns (9);
-	}
-}
