@@ -13,25 +13,25 @@
 
 ## Custom mixins with explanations
 
-**col($col-no, $shift-no, $media, $drop-to, $shift-to)**
+  **col($col-no, $shift-no, $media, $drop-to, $shift-to)**
 
-Autodropping collumns to specified setup
+  Autodropping collumns to specified setup
 
 
-**simple-col($col-no, $shift-no)**
+  **simple-col($col-no, $shift-no)**
 
-Quicker way of defining span-collumns and shifts.
-Especially useful for mediaquery changes where layout changes accross more than 1 breakpoint
+  Quicker way of defining span-collumns and shifts.
+  Especially useful for mediaquery changes where layout changes accross more than 1 breakpoint
 
-**single-col**
+  **single-col**
 
-Quick dropping collumns to 12,0 esp useful for mobile layouts where tablet layout has shifts or smaller collumn width
+  Quick dropping collumns to 12,0 esp useful for mobile layouts where tablet layout has shifts or smaller collumn width
 
-**font($family, $size, $color)**
+  **font($family, $size, $color)**
 
-Quick define fonts
+  Quick define fonts
 
 
 ## Variable Style Guide
 
-If font weight is determined by font family (if possible avoid) then define as *serif*, *serif-bold* et cetera.
+  If font weight is determined by font family (if possible avoid) then define as *serif*, *serif-bold* et cetera.
