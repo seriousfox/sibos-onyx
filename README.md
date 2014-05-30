@@ -10,6 +10,7 @@
 
 7. Search and replace all instances of [site-name] with the name of the project.
 
+
 ## Custom mixins with explanations
 
 **col($col-no, $shift-no, $media, $drop-to, $shift-to)**
@@ -30,6 +31,7 @@ Quick dropping collumns to 12,0 esp useful for mobile layouts where tablet layou
 
 Quick define fonts
 
-##Variable Style Guide
+
+## Variable Style Guide
 
 If font weight is determined by font family (if possible avoid) then define as *serif*, *serif-bold* et cetera.
