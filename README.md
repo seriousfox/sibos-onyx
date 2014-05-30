@@ -10,7 +10,7 @@
 
 7. Search and replace all instances of [site-name] with the name of the project.
 
-##Custom mixins with explanations
+## Custom mixins with explanations
 
 **col($col-no, $shift-no, $media, $drop-to, $shift-to)**
 
@@ -33,4 +33,3 @@ Quick define fonts
 ##Variable Style Guide
 
 If font weight is determined by font family (if possible avoid) then define as *serif*, *serif-bold* et cetera.
-
