@@ -15,5 +15,7 @@ gem 'neat'
 gem 'shotgun'
 gem 'rb-fsevent'
 gem 'guard-livereload'
+gem 'guard-livereload'
+gem 'foreman'
 
 gem 'heroku-deflater', :group => :production

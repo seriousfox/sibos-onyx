@@ -7,6 +7,17 @@
       }
 }
 
+@mixin simple-col($col-no, $shift-no) {
+  @include span-columns($col-no);
+  @include shift($shift-no);
+}
+
+@mixin single-col {
+  @include span-columns(12);
+  @include shift(0);
+}
+
+
 @mixin padded-container {
   @include clearfix;
   max-width: $max-width;
@@ -18,6 +29,13 @@
   }
 }
 
+//please create variables for family.
+
+@mixin font($family, $size, $color) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+}
 
 @mixin default-spacing {
   h1 {
