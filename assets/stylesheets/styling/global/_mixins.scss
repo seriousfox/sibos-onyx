@@ -57,5 +57,21 @@
   p {
     padding-bottom: 20px;
   }
+}
 
+@mixin omega-reset($nth) {
+  &amp;:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &amp;:nth-child(#{$nth}+1) { clear: none }
+}
+
+@mixin vertical-breakpoint($point) {
+  @if $point == large {
+    @media (max-height: 900px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-height: 700px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-height: 500px)  { @content; }
+  }
 }
