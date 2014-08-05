@@ -1,7 +1,8 @@
-@import "bourbon/bourbon";
+@import "framework/bourbon/bourbon";
 @import "grid-settings";
-@import "neat/neat";
-@import "[site-name]/hard-reset";
-@import "[site-name]/variables";
-@import "[site-name]/mixins";
-@import "[site-name]/typography";
+@import "framework/neat/neat";
+@import "styling/global/hard-reset";
+@import "styling/global/variables";
+@import "styling/global/mixins";
+@import "styling/global/extenders";
+@import "styling/global/typography";
