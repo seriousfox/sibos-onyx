@@ -31,9 +31,10 @@
 
 //please create variables for family.
 
-@mixin font($family, $size, $color) {
+@mixin font($family, $size, $weight, $color) {
   font-family: $family;
   font-size: $size;
+  font-weight: $weight;
   color: $color;
 }
 
@@ -57,11 +58,6 @@
   p {
     padding-bottom: 20px;
   }
-}
-
-@mixin omega-reset($nth) {
-  &amp;:nth-child(#{$nth}) { margin-right: flex-gutter(); }
-  &amp;:nth-child(#{$nth}+1) { clear: none }
 }
 
 @mixin vertical-breakpoint($point) {

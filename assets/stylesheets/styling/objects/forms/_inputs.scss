@@ -110,7 +110,7 @@ select {
   }
   width: 30px;
   height: 30px;
-  border: 4px solid $lime;
+  border: 4px solid $base-border-color;
   background-color: white;
   position: absolute;
   left: 0;
@@ -127,7 +127,7 @@ select {
       @include position(absolute,6px 0 0 4px);
       width: 12px;
       height: 5px;
-      border: 3px solid $lime;
+      border: 3px solid $base-border-color;
       border-top: none;
       border-right: none;
       @include transform(rotate(-50deg));

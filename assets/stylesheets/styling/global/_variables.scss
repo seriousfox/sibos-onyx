@@ -7,15 +7,18 @@ $bold: 700;
 $heavy: 800;
 $font-black: 900;
 
-$sans-family: sans-serif;
-$serif-family: serif;
+$sans: sans-serif;
+$serif: serif;
 
 //colours
 $background: #FFFFFF;
 $main-colour: #666666;
+$text-body-color: #444444;
 
+$base-border-color: #eee;
 //size variables
 $base-border-radius: 6;
+
 
 
 $form-border-color: darken($background, 5%);

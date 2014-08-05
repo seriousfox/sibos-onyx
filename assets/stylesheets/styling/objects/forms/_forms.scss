@@ -10,7 +10,7 @@ form {
 
 form {
   label {
-    @include font($sans, 1.1em, $semibold, $text-grey);
+    @include font($sans, 1.1em, $semibold, $text-body-color);
     padding-right: 10px;
     padding-bottom: 10px;
     margin-top: 3px;
