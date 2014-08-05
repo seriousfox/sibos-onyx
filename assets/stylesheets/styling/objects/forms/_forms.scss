@@ -1,0 +1,18 @@
+fieldset {
+  background: lighten($main-colour, 10%);
+  border: 1px solid $form-border-color;
+  margin: 0 0 ($base-line-height / 2) 0;
+  padding: $base-line-height;
+}
+form {
+  padding-bottom: 30px;
+}
+
+form {
+  label {
+    @include font($sans, 1.1em, $semibold, $text-grey);
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-top: 3px;
+  }
+}
