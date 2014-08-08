@@ -79,6 +79,8 @@ GEM
       sprockets
       sprockets-helpers
       sprockets-sass
+    sinatra-partial (0.4.0)
+      sinatra
     slop (3.4.7)
     sprockets (2.10.0)
       hike (~> 1.2)
@@ -119,6 +121,7 @@ DEPENDENCIES
   shotgun
   sinatra
   sinatra-asset-pipeline
+  sinatra-partial
   sprockets
   sprockets-less
   therubyracer
