@@ -1,14 +1,5 @@
 //fonts
-$thin: 100;
-$light: 300;
-$regular: 400;
-$semibold: 600;
-$bold: 700;
-$heavy: 800;
-$font-black: 900;
 
-$sans: sans-serif;
-$serif: serif;
 
 //colours
 $background: #FFFFFF;
@@ -19,14 +10,4 @@ $base-border-color: #eee;
 //size variables
 $base-border-radius: 6;
 
-
-
-$form-border-color: darken($background, 5%);
-$form-border-color-hover: darken($background, 10%);
-$form-border-color-focus: $main-colour;
-$form-border-radius: $base-border-radius;
-$form-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
-$form-font-size: 1em;
-$base-line-height: 1;
-$form-font-family: $sans;
+$base-font-size: 16px;

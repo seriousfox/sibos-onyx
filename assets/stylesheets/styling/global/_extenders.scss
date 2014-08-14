@@ -7,14 +7,6 @@
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
-%field {
-  width: 100%;
-  padding: 20px;
-  border-radius: $base-border-radius;
-  @include span-columns(12);
-  margin-bottom: 20px;
-}
-
 %clearing-block {
   width: 100%;
   clear: both;
