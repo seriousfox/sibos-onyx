@@ -1,0 +1,48 @@
+body {
+  @include background-image( linear-gradient(to top, #364A4A, #000000));
+}
+
+@include keyframes(background-frames) {
+  from { background-position: 0%, center;}
+  to { background-position: 100%, center;}
+}
+
+.left-animated-dots {
+  @include position(fixed, 0px 0px 0px 0px);
+  background: image-url('dots1.png');
+  background-repeat: repeat-x;
+  background-position: 0% center;
+  @include animation(background-frames 100s ease);
+  @include animation-iteration-count(infinite);
+  @include animation-direction(alternate-reverse);
+}
+
+@include keyframes(foreground-frames) {
+  from { background-size: 100%, center;}
+  to { background-position: 0%, center;}
+}
+
+.right-animated-dots {
+  @include position(fixed, 0px 0px 0px 0px);
+  background: image-url('dots2.png');
+  background-repeat: repeat-x;
+  background-position: 100% center;
+  @include animation(foreground-frames 100s ease);
+  @include animation-iteration-count(infinite);
+  @include animation-direction(alternate-reverse)
+}
+
+@include keyframes(lines-bounce) {
+  from { background-size: 150% 150%;}
+  to { background-size: 100% 100%;}
+}
+
+.tech-lines {
+  @include position(fixed, 0px 0px 0px 0px);
+  background: image-url('lines.svg') no-repeat;
+  background-size: 150% 150%;
+  background-position: 0%, 50%;
+  /* @include animation(lines-bounce 75s ease);
+  @include animation-iteration-count(infinite);
+  @include animation-direction(alternate-reverse) */
+}

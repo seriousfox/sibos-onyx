@@ -1,3 +1,6 @@
+$form-font-family: sans-serif;
+$form-font-size: 1rem;
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -14,7 +17,6 @@ select {
 
 label {
   font-weight: bold;
-  margin-bottom: $base-line-height / 4;
 
   &.required:after {
     content: "*";
@@ -37,7 +39,6 @@ textarea,
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
-  margin-bottom: $base-line-height / 2;
   padding: 5px;
   height: 35px;
 
@@ -62,7 +63,6 @@ input[type="search"] {
 
 input[type="checkbox"], input[type="radio"] {
   display: inline;
-  margin-right: $base-line-height / 4;
 }
 input[type="date"] {
   height: 35px;
@@ -78,7 +78,6 @@ input[type="file"] {
 
 select {
   width: auto;
-  margin-bottom: $base-line-height;
 }
 
 .styled-select {

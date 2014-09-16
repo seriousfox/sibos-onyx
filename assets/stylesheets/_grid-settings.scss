@@ -5,16 +5,20 @@
 // Override Neat's grid settings
 // ------------------------------------------------------------
 
-$column: golden-ratio(1em, 3) !default; // Column width
-$gutter: golden-ratio(1em, 3) !default; // Gutter between each two columns
 
 // ------------------------------------------------------------
 // Set Bourbon's flex-grid variables to match what Neat is doing
 // http://bourbon.io/docs/#flex-grid
 // ------------------------------------------------------------
+body {
+  font-size: 16px;
+}
+
+/* $column: golden-ratio(1em, 3) !default; // Column width
+$gutter: golden-ratio(1em, -2) !default;
 
 $fg-column: $column;
-$fg-gutter: $gutter;
+$fg-gutter: $gutter; */
 
 @mixin omega-reset($nth, $columns) {
   &:nth-child(#{$nth}) { margin-right: flex-gutter($columns); }
@@ -23,12 +27,13 @@ $fg-gutter: $gutter;
 
 // Change the grid settings
 $column: 90px;
-$gutter: 30px;
+$gutter: 15px;
 $grid-columns: 12;
-$max-width: em(1100);
-$visual-grid: true;
+$max-width: em(700);
+$visual-grid: false;
 
 // Define your breakpoints
+$big-screen: new-breakpoint(max-width 1673px 12);
 $ipad: new-breakpoint(max-width 991px 12);
 $tablet: new-breakpoint(max-width 768px 9);
 $phone: new-breakpoint(max-width 580px 6);
