@@ -4,14 +4,11 @@ body {
   color: $ice-blue;
   font-family: $sans;
   -webkit-font-smoothing: antialiased;
-<<<<<<< HEAD
-=======
 }
 
 @include keyframes(background-frames) {
   from { background-position: 0%, center;}
   to { background-position: 100%, center;}
->>>>>>> linneas_stuff
 }
 
 .left-animated-dots {
