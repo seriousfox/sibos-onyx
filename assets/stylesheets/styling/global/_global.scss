@@ -1,5 +1,9 @@
 body {
-  @include background-image( linear-gradient(to top, #364A4A, #000000));
+  @include background-image( linear-gradient(to top, $base-gradient, #000000));
+  font-size: 16px;
+  color: $ice-blue;
+  font-family: $sans;
+  -webkit-font-smoothing: antialiased;
 }
 
 .left-animated-dots {

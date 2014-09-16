@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,600,200,300,300italic);
+
 $thin: 100;
 $light: 300;
 $regular: 400;
@@ -6,8 +8,7 @@ $bold: 700;
 $heavy: 800;
 $font-black: 900;
 
-$sans: sans-serif;
-$serif: serif;
+$sans: 'Titillium Web', 'Helvetica Neue', 'Helvetica', sans-serif ;
 
 @function calculateRem($size) {
   $remSize: $size / $base-font-size;
@@ -26,7 +27,9 @@ $serif: serif;
 }
 
 h1 {
-
+  font-size: rem(30px);
+  text-transform: uppercase;
+  font-weight: $light;
 }
 
 h2 {
