@@ -1,12 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,600,200,300,300italic);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,600,200,300,300italic,700);
 
 $thin: 100;
 $light: 300;
 $regular: 400;
 $semibold: 600;
 $bold: 700;
-$heavy: 800;
-$font-black: 900;
+$xbold: 800;
+$xxbold: 900;
 
 $sans: 'Titillium Web', 'Helvetica Neue', 'Helvetica', sans-serif ;
 
@@ -39,7 +39,10 @@ h3 {
 }
 
 h4 {
-
+  color: $ice-blue-softer;
+  font-weight: $regular;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 h5 {
@@ -48,6 +51,12 @@ h5 {
 
 p {
 
+}
+
+aside {
+  font-size: rem(14px);
+  text-transform: uppercase;
+  color: $ice-blue-softer;
 }
 
 blockquote {
