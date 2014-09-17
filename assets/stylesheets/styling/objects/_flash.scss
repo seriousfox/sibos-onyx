@@ -38,11 +38,3 @@ $flash-height: 75px;
     opacity: 1;
   }
 }
-
-@-webkit-keyframes generated-css-animation1{
-  from{
-    opacity:0;
-    transform:scale(.2) translateY(-200px);
-  }
-}
-div{-webkit-animation:generated-css-animation1 .5s ease forwards}

@@ -5,7 +5,12 @@
   <h1>Acquiring Location</h1>
   <div class="progress-bar">
     <span class="meter" style="width:0%;"></span>
-  </div>  
+  </div>
+  <div class="map-locator">
+    <div class="ping"></div>
+    <img class="map" src="<%= image_path 'worldmap.svg' %>">  
+  </div>
+  
 </div>
 
 
@@ -20,7 +25,7 @@
       flash.$el.one('completed',function(){
         // TODO: Timeout shouldn't be needed completed should have a wait instead
         setTimeout(function(){
-          $.pjax({url: '/face', container: '.application'})  
+          // $.pjax({url: '/face', container: '.application'})  
           flash.hide()
         },1500)
         
