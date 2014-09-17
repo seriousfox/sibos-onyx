@@ -25,12 +25,11 @@
       flash.$el.one('completed',function(){
         // TODO: Timeout shouldn't be needed completed should have a wait instead
         setTimeout(function(){
-          // $.pjax({url: '/face', container: '.application'})  
+          $.pjax({url: '/face', container: '.application'})  
           flash.hide()
         },1500)
         
       })
       flash.show();
-      
     })
 </script>

@@ -1,7 +1,9 @@
 
 <div class="face_container">
   <div class="profile">
-    userimage
+    <div class="user-photo-container" href="/cfo-login">
+      <img src="<%= image_path 'susan.jpg' %>" alt="">
+    </div>
   </div>
   <div class="face_feed">
     <canvas id="compare" width="640" height="480" style="display:none"></canvas>
@@ -15,7 +17,10 @@
     <p id='gUMMessage'></p>
     <h2>Status : <span id='headtrackerMessage'></span></h2>
   </div>
-  
+</div>
+<div class="map-background">
+  <img class="map" src="<%= image_path 'worldmap.svg' %>">  
+  <h3>Location: London, UK</h3>
 </div>
 
 <script type="text/javascript">

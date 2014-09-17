@@ -1,6 +1,13 @@
 .face_container {
-  // @include outer-container;
   margin-top: 40px;
+  z-index: 20;
+  position: absolute;
+  left: 0;
+  right: 0;
+  .user-photo-container {
+    border: 1px dotted $border-ice-blue;
+    border:1px solid 
+  }
   .profile {
     @include span-columns(2);
   }

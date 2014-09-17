@@ -21,3 +21,14 @@
     }
   }
 }
+
+.map-background {
+  position: absolute;
+  bottom: 10px;
+  left:0;
+  width:800px;
+  text-align: center;
+  img {
+    opacity: 0.6;
+  }
+}
