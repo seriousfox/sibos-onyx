@@ -1,6 +1,6 @@
 .accounts-list {
   margin-left: 5%;
-  margin-top: $padding-base/2;
+  margin-top: 1%;
   li {
     @extend %clearfix;
     background: $transparent-panel;
@@ -39,21 +39,3 @@
   }
 }
 
-.alerts {
-  @include span-columns(7);
-  @include omega();
-  margin-top: $padding-base/4;
-  .alert-lists {
-    margin-top: $padding-base/2;
-    li {
-      @extend %clearfix;
-      background: $transparent-panel;
-      padding: $padding-base;
-      margin-bottom: $padding-base/2;
-      border: 1px solid $border-ice-blue;
-      &:last-child {
-        margin-bottom: 0px;
-      }
-    }
-  }
-}
