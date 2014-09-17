@@ -8,19 +8,24 @@
   <meta name="author" content="">
 
   <%= partial(:'partials/social/social_meta') %>
-
+  <!-- 
   <script type="text/javascript" src="//use.typekit.net/afm5tip.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+   -->
   <%= stylesheet_tag 'application' %>
+  <%= javascript_tag 'libs' %>
+  <%= javascript_tag 'application' %>
 </head>
 
 <body>
-<div class="left-animated-dots"></div>
-<div class="right-animated-dots"></div>
-<div class="tech-lines"></div>
-
-  <%= yield %>
-
-  <%= javascript_tag 'libs' %>
-  <%= javascript_tag 'application' %>
+  <div class="application">
+    <%= yield %>
+  </div>
+  <div class="flash"></div>
+  <div class="background">
+    <div class="left-animated-dots"></div>
+    <div class="right-animated-dots"></div>
+    <div class="tech-lines"></div>  
+  </div>
+  
 </body>

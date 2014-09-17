@@ -3,6 +3,12 @@ Bundler.require
 require 'sinatra/asset_pipeline'
 require 'sinatra/partial'
 
+class Sinatra::Request
+  def pjax?
+    env['HTTP_X_PJAX'] || self['_pjax']
+  end
+end
+
 class App < Sinatra::Base
   configure do
     set :production, ENV['RACK_ENV'] == 'production'
@@ -24,8 +30,12 @@ class App < Sinatra::Base
     erb :index
   end
 
-  get "/location" do
-    erb :location
+  get "/location/:user" do
+    erb :location, :layout => !request.pjax?
+  end
+
+  get "/face" do
+    erb :face, :layout => !request.pjax?
   end
 
   get "/susan" do

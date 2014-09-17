@@ -1,4 +1,5 @@
 ###*
+# * On initiilze you can pass @param {options} which will be passed to the jquery animate
 # * Function to start a progressbar
 # * @param {callback} Fired once the animation is complete
 # Example
@@ -7,14 +8,17 @@ new App.progress(element).start ->
 
 ###
 class App.progress
-  constructor: (element) ->
+  constructor: (element, options) ->
     @$el = $(element)
     @$meter = @$el.find('.meter')
+    @options = options
     return @
 
   start: (callback) ->
-    @$meter.css('width': 0)
-    @$meter.animate
+    opts = $.extend
       width: "+=100%"
-    , 3000, callback
+      delay: 0
+    , @options
+    @$meter.css('width': 0)
+    @$meter.delay(opts.delay).animate opts, 4000, 'swing',callback
   

@@ -1,0 +1,40 @@
+$flash-default-background: #87b848;
+$flash-height: 75px;
+
+.flash {
+  background: $flash-default-background;
+  height:$flash-height;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -$flash-height;
+  @include transform(scale(0));
+  opacity: 0;
+  z-index: 2;
+  &.animate {
+    @include animation(show-flash .6s cubic-bezier(0.250, 0.250, 0.375, 1.580) forwards);
+    @include animation-fill-mode(forwards);
+    &.fade {
+      @include animation(show-flash .6s cubic-bezier(0.250, 0.250, 0.375, 1.580));
+      @include animation-fill-mode(backwards);
+    }
+  }
+  h1 {
+    text-align: center;
+    line-height: $flash-height;
+    color:#fff;
+  }
+}
+
+
+@include keyframes(show-flash) {
+  from { 
+    opacity: 0;
+    @include transform(scale(0) translateY(10px));
+  }
+  to { 
+    @include transform(scale(1) translateY(0px));
+    opacity: 1;
+  }
+}

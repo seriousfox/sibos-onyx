@@ -1,0 +1,34 @@
+.location-container {
+  margin-top: 80px;
+  margin-left: 40px;
+  h1 {
+    text-align: center;
+  }
+
+  .user-photo-container {
+    border: 1px dotted $border-ice-blue;
+    position: absolute;
+    border:1px solid 
+  }
+
+  .map-locator {
+    margin-top: 40px;
+    text-align: center;
+    width:1024px;
+    margin:40px auto;
+    .map {
+      
+    }
+  }
+}
+
+.map-background {
+  position: absolute;
+  bottom: 10px;
+  left:0;
+  width:800px;
+  text-align: center;
+  img {
+    opacity: 0.6;
+  }
+}
