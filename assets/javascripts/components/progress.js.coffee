@@ -20,5 +20,5 @@ class App.progress
       delay: 0
     , @options
     @$meter.css('width': 0)
-    @$meter.delay(opts.delay).animate opts, 4000, callback
+    @$meter.delay(opts.delay).animate opts, 4000, 'swing',callback
   

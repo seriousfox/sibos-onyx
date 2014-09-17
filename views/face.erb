@@ -38,7 +38,7 @@
             left: "+=600px"
           },2000,function(){
             var flash = new App.Flash('.flash').text('<h1>Face Matched</h1>')
-            flash.$el.on('completed',function(){
+            flash.$el.one('completed',function(){
               console.log('shit completes')
             })
             flash.show()
