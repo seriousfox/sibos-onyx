@@ -43,7 +43,10 @@
           },2000,function(){
             var flash = new App.Flash('.flash').text('<h1>Face Matched</h1>')
             flash.$el.one('completed',function(){
-              console.log('shit completes')
+              setTimeout(function(){
+                $.pjax({url: '/audio', container: '.application'})  
+                flash.hide()
+              },1500)
             })
             flash.show()
           })
