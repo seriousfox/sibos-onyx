@@ -38,4 +38,11 @@ class App < Sinatra::Base
     erb :face, :layout => !request.pjax?
   end
 
+  get "/susan" do
+    erb :cfo_dash
+  end
+
+  get "/robert" do
+    erb :acct_man_dash
+  end
 end

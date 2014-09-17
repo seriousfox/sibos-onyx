@@ -1,6 +1,7 @@
 @import "framework/bourbon/bourbon";
 @import "grid-settings";
 @import "framework/neat/neat";
+@import "styling/global/functions";
 @import "styling/global/hard-reset";
 @import "styling/global/variables";
 @import "styling/global/mixins";
@@ -12,5 +13,6 @@
 @import "styling/objects/progress";
 @import "styling/objects/face_detection";
 @import "styling/objects/flash";
+@import "styling/objects/users";
 @import "styling/pages/loading-splash";
 @import "styling/pages/face_detection";

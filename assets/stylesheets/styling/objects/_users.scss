@@ -1,0 +1,26 @@
+.user-photo-container {
+  position: relative;
+  display: inline-block;
+  opacity: 0.6;
+  margin-right: $padding-base;
+  background: $teal;
+  height: 257px;
+  width: 165px;
+  overflow: hidden;
+  box-shadow: $no-glow;
+  @include transition(all 0.2s ease);
+  &:hover {
+    cursor: pointer;
+    box-shadow: $teal-glow;
+    img {
+      opacity: 1;
+    }
+  }
+  img {
+    @include position(absolute, 0px 0px 0px 0px);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0.8;
+    @include transition(opacity 0.2s ease);
+  }
+}
