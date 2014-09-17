@@ -1,6 +1,13 @@
 .location-container {
   margin-top: 80px;
+  margin-left: 40px;
   h1 {
     text-align: center;
+  }
+
+  .user-photo-container {
+    border: 1px dotted $border-ice-blue;
+    position: absolute;
+    border:1px solid 
   }
 }

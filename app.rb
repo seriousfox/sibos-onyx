@@ -30,7 +30,7 @@ class App < Sinatra::Base
     erb :index
   end
 
-  get "/location" do
+  get "/location/:user" do
     erb :location, :layout => !request.pjax?
   end
 
