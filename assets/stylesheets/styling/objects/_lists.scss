@@ -1,12 +1,15 @@
 .accounts-list {
   margin-left: 5%;
-  margin-top: 1%;
+  margin-top: $padding-base/2;
   li {
     @extend %clearfix;
     background: $transparent-panel;
     padding: $padding-base;
     margin-bottom: $padding-base/2;
     border: 1px solid $border-ice-blue;
+    &:hover {
+      background-color: $teal-panel;
+    }
     &:last-child {
       margin-bottom: 0px;
     }
@@ -39,3 +42,52 @@
   }
 }
 
+.alerts {
+  @include span-columns(6);
+  @include omega();
+  margin-top: $padding-base/4;
+  h3 {
+    color: $ice-blue-softer;
+  }
+  .alert-lists {
+    margin-top: $padding-base/4;
+    a {
+      margin-bottom: $padding-base/2;
+      display: block;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+    li {
+      @extend %clearfix;
+      background: $red-panel;
+      padding: $padding-base;
+      margin-right: 5%;
+      position: relative;
+      @include transition(all 0.3s ease-in);
+    }
+  }
+  .alert-comment {
+    &:before {
+      @extend %transition-base;
+      @extend %vertical-align;
+      content: 'Recommendations available';
+      position: absolute;
+      right: $padding-base;
+      text-transform: uppercase;
+      color: $yellow;
+      font-weight: $semibold;
+      opacity: 0.3;
+    }
+    &:hover:before {
+      opacity: 0.6;
+    }
+  }
+}
+
+li {
+  &.red:hover {
+    background-color: rgba($red, 0.6);
+    @include transform(scale(1.03,1.03));
+  }
+}
