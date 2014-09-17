@@ -1,0 +1,41 @@
+.accounts-list {
+  margin-left: 5%;
+  margin-top: 1%;
+  li {
+    @extend %clearfix;
+    background: $transparent-panel;
+    padding: $padding-base;
+    margin-bottom: $padding-base/2;
+    border: 1px solid $border-ice-blue;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .currency {
+      @include span-columns(2);
+      padding-left: $padding-base;
+      font-weight: $semibold;
+      font-style: italic;
+    }
+    .account-detail, .account-balance {
+      @include span-columns(5);
+    }
+    .account-balance {
+      @include omega();
+      text-align: right;
+      font-weight: bold;
+      color: $ice-blue-softer;
+      font-size: 1rem;
+    }
+  }
+
+}
+
+.view-more {
+  float: right;
+  text-align: right;
+  color: $ice-blue-softer;
+  &:hover {
+    border-bottom: 1px solid $border-teal;
+  }
+}
+

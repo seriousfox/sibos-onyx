@@ -10,6 +10,7 @@ $base-border-radius: 6;
 $base-font-size: 16px;
 
 $ice-blue: #90DED6;
+$ice-blue-softer: #cbeaf1;
 $teal: #00FFFC;
 $teal-dark: #90DED6;
 $yellow-light: #90DED6;
@@ -25,6 +26,7 @@ $padding-base: rem(20px);
 ///transparent colours
 
 $black-panel: rgba(0,0,0,0.6);
+$transparent-panel: rgba(0,0,0,0.3);
 
 $border-teal: rgba($teal, 0.5);
 $border-ice-blue: rgba($ice-blue, 0.5);
