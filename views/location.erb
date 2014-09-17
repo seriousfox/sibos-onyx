@@ -1,9 +1,30 @@
-Steps
-
-1. Acquiring Location
-2. Maybe actually acquire the country
-2. Load a marker over london / SA
-
-<div class="progress-bar">
-  <span class="meter" style="width:0%;"></span>
+<div class="location-container">
+  <h1>Acquiring Location</h1>
+  <div class="progress-bar">
+    <span class="meter" style="width:0%;"></span>
+  </div>  
 </div>
+
+
+<script type="text/javascript">
+  // 1. Acquiring Location
+  // 2. Maybe actually acquire the country
+  // 2. Load a marker over london / SA
+  $(function(){
+    var options = {delay: 2000 };
+    new App.progress('.progress-bar',options).start(function(){
+      // Show a flash message
+      var flash = new App.Flash('.flash').text('<h1>Location Acquired: London, UK 51.5072 N, 0.1275 W</h1>')
+      flash.$el.on('completed',function(){
+        // TODO: Timeout shouldn't be needed completed should have a wait instead
+        setTimeout(function(){
+          // $.pjax({url: '/face', container: '.application'})  
+        },1000)
+        
+      })
+      flash.show();
+      
+    })
+      
+  })
+</script>

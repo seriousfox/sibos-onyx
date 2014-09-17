@@ -18,8 +18,6 @@
   
 </div>
 
-<div class="flash"></div>
-
 <script type="text/javascript">
   $(function(){
     var face = new App.Face("#vid");
@@ -38,7 +36,13 @@
           },1500)
           $('.scan-line-horizontal').animate({
             left: "+=600px"
-          },2000)
+          },2000,function(){
+            var flash = new App.Flash('.flash').text('<h1>Face Matched</h1>')
+            flash.$el.on('completed',function(){
+              console.log('shit completes')
+            })
+            flash.show()
+          })
         },3000)
       };
     })

@@ -58,6 +58,8 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
+    rack-ssl (1.3.4)
+      rack
     raindrops (0.12.0)
     rake (10.1.0)
     rb-fsevent (0.9.3)
@@ -116,6 +118,7 @@ DEPENDENCIES
   guard-livereload
   heroku-deflater
   neat
+  rack-ssl
   rb-fsevent
   sass
   shotgun

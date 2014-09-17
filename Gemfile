@@ -18,5 +18,5 @@ gem 'rb-fsevent'
 gem 'guard-livereload'
 gem 'guard-livereload'
 gem 'foreman'
-
+gem 'rack-ssl'
 gem 'heroku-deflater', :group => :production

@@ -19,7 +19,11 @@ $flash-height: 75px;
       @include animation-fill-mode(backwards);
     }
   }
-
+  h1 {
+    text-align: center;
+    line-height: $flash-height;
+    color:#fff;
+  }
 }
 
 
