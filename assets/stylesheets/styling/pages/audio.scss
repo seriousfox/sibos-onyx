@@ -1,0 +1,23 @@
+.audio_container {
+  margin-top: 40px;
+  z-index: 20;
+  position: absolute;
+  left: 0;
+  right: 0;
+  .user-photo-container {
+    border: 1px dotted $border-ice-blue;
+    border:1px solid 
+  }
+  .profile {
+    @include span-columns(2);
+  }
+  .audio_feed {
+    @include span-columns(7);
+    h1 {
+      text-align: center;
+    }
+  }
+  .messaging {
+   @include span-columns(3);
+  }
+}
