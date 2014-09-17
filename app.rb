@@ -28,4 +28,8 @@ class App < Sinatra::Base
     erb :location
   end
 
+  get "/face" do
+    erb :face
+  end
+
 end

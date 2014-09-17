@@ -1,0 +1,13 @@
+.face_container {
+  // @include outer-container;
+  margin-top: 40px;
+  .profile {
+    @include span-columns(2);
+  }
+  .face_feed {
+    @include span-columns(7);
+  }
+  .messaging {
+   @include span-columns(3);
+  }
+}
