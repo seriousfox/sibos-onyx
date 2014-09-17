@@ -14,9 +14,9 @@ $ice-blue-softer: #cbeaf1;
 $teal: #00FFFC;
 $teal-dark: #90DED6;
 $yellow-light: #90DED6;
-$yellow: #ffd200;
-$red: #EA3442;
-$orange: #F17330;
+$yellow: #90DED6;
+$red: #ed303c;
+$orange: #F69A63;
 
 $base-gradient: #364A4A;
 $fail-gradient: #623928;
@@ -27,8 +27,7 @@ $padding-base: rem(20px);
 
 $black-panel: rgba(0,0,0,0.6);
 $transparent-panel: rgba(0,0,0,0.3);
-$red-panel: rgba(234,52,66,0.24);
-$teal-panel: rgba($teal, 0.3);
+$red-panel : rgba($red,0.4);
 
 $border-teal: rgba($teal, 0.5);
 $border-ice-blue: rgba($ice-blue, 0.5);
