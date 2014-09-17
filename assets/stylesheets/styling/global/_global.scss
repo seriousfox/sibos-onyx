@@ -1,7 +1,7 @@
 body {
   @include background-image( linear-gradient(to top, $base-gradient, #000000));
   font-size: 16px;
-  color: $ice-blue;
+  color: $ice-blue-softer;
   font-family: $sans;
   -webkit-font-smoothing: antialiased;
 }

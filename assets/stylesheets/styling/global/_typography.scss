@@ -66,5 +66,6 @@ blockquote {
 }
 
 .red-text {
+  @extend %transition-base;
   color: $red;
 }
