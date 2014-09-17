@@ -28,7 +28,10 @@ h1 {
 }
 
 h2 {
-
+  font-size: rem(21px);
+  text-transform: uppercase;
+  font-weight: $light;
+  padding-bottom: $padding-base;
 }
 
 h3 {

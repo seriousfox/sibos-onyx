@@ -28,4 +28,11 @@ class App < Sinatra::Base
     erb :location
   end
 
+  get "/susan" do
+    erb :cfo_dash
+  end
+
+  get "/robert" do
+    erb :acct_man_dash
+  end
 end

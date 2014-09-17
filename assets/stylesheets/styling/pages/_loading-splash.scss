@@ -1,7 +1,31 @@
+
+@include keyframes(wipe) {
+  0% {
+    -webkit-mask-position: 275% 0%;
+  }
+  100% {
+    -webkit-mask-position: 185% 0%;
+  }
+}
+
+@include keyframes(scale-and-move-up) {
+  0% {
+    top: 50%;
+    @include transform(translateY(-50%) scale(1,1));
+  }
+  100% {
+    top: 0%;
+    @include transform(translateY(0%) scale(0.4,0.4));
+  }
+}
 .onyx-welcome-splash {
-  @include col(6, 3, $tablet, 8, 2);
-  position: absolute;
-  @extend %vertical-align;
+  @include col(6, 3, $ipad, 8, 2);
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%) scale(1,1));
+  @include animation(scale-and-move-up 2s cubic-bezier(0.550, 0.055, 0.675, 0.190));
+  @include animation-delay(5.3s);
+  @include animation-fill-mode(forwards);
   .onyx-splash-logo {
     position: relative;
     @include animation(wipe 6s ease);
@@ -17,11 +41,45 @@
   }
 }
 
-@include keyframes(wipe) {
+@include keyframes(top-wipe) {
   0% {
-    -webkit-mask-position: 275% 0%;
+    -webkit-mask-position: 0% 100%;
   }
   100% {
-    -webkit-mask-position: 185% 0%;
+    -webkit-mask-position: 0% 0%;
+  }
+}
+
+.login-splash-wrapper {
+  @include col(6, 3, $ipad, 8, 2);
+  @include animation(top-wipe 3s ease);
+  @include animation-fill-mode(forwards);
+  @include animation-delay(7.5s);
+  position: relative;
+  -webkit-mask-size: 100% 200%;
+  -webkit-mask-position: 0% 100%;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom,
+    color-stop(0.00,  rgba(0,0,0,1)),
+    color-stop(0.35,  rgba(0,0,0,1)),
+    color-stop(0.50,  rgba(0,0,0,0)),
+    color-stop(0.75,  rgba(0,0,0,0)),
+    color-stop(1.00,  rgba(0,0,0,0)));
+  .double-border-wrapper {
+    border: 3px double $border-teal;
+    padding: $padding-base/4;
+  }
+  .login-splash {
+    @extend %clearfix;
+    border: 1px dotted $border-ice-blue;
+    background: rgba(0,0,0,0.6);
+    padding: $padding-base*2;
+    text-align: center;
+    h2 {
+      padding-bottom: $padding-base;
+    }
+    .user-photos-wrapper {
+      display: table;
+      margin: 0 auto;
+    }
   }
 }
