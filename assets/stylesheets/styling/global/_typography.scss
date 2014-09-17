@@ -69,3 +69,7 @@ blockquote {
   @extend %transition-base;
   color: $red;
 }
+.yellow-text {
+  @extend %transition-base;
+  color: $yellow;
+}

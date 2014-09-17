@@ -1,28 +1,59 @@
-<%= partial(:'partials/accounts_summary') %>
-<div class="alerts">
-  <h3 class="red-text">7 Alerts</h3>
-  <ul class="alert-lists">
+<div class="row">
+  <%= partial(:'partials/accounts_summary') %>
+  <div class="alerts">
+    <div class="alert-notify">
+      <h3 class="red-text">7 Alerts</h3>
+      <a href="" class="view-more">
+        View More
+      </a>
+    </div>
+    <ul class="alert-lists">
+      <a href="">
+        <li class="red">
+          <h3>
+            2 Payments awaiting approval
+          </h3>
+        </li>
+      </a>
+      <a href="/car-sales">
+        <li class="red alert-comment">
+          <h3>
+            Car Sales down in Q3
+          </h3>
+          <span class="red-text">
+            Cashflow impact possibility: 74%
+          </span>
+        </li>
+      </a>
+      <a href="">
+        <li class="red">
+          <h3>
+            3 invoices PMT due
+          </h3>
+        </li>
+      </a>
+    </ul>
+  </div>
+</div>
+<div class="recommendations">
+  <h3 class="yellow-text">
+    2 Recommendations
+  </h3>
+  <span class="view-all">
+    View All
+  </span>
+  <ul class="recommendation-list">
     <a href="">
-      <li class="red">
+      <li>
         <h3>
-          2 Payments awaiting approval
+          Make NYC Building Loan INT Pmt today
         </h3>
       </li>
     </a>
-    <a href="/car-sales">
-      <li class="red alert-comment">
-        <h3>
-          Car Sales down in Q3
-        </h3>
-        <span class="red-text">
-          Cashflow impact possibility: 74%
-        </span>
-      </li>
-    </a>
     <a href="">
-      <li class="red">
+      <li>
         <h3>
-          3 invoices PMT due
+          Invest excess cash from AED to USD sweep
         </h3>
       </li>
     </a>
