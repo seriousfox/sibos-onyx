@@ -6,19 +6,32 @@ body {
   -webkit-font-smoothing: antialiased;
   height: 100%;
 }
+html {
+  font-size: 16px;
+  @include media($big-screen) {
+    font-size: 18px;
+  }
+  @include media($small-screen) {
+    font-size: 13px;
+  }
+}
 a {
   color: $ice-blue-softer;
 }
+.app-padding {
+  padding: $gutter;
 
+
+}
 .application {
-  z-index: 1;
+  @extend %clearfix;
+  z-index: 999;
   width: 100%;
   height: 100%;
   position: absolute;
-  padding: $gutter;
 }
 .background {
-  z-index: 2;
+  pointer-events: none;
 }
 .row {
   @extend %clearing-block;
@@ -60,6 +73,19 @@ a {
   @include animation-iteration-count(infinite);
   @include animation-direction(alternate-reverse) */
 }
+.top-nav {
+  padding-top: $padding-base/2;
+  padding-bottom: $padding-base/4;
+  .left {
+    @include span-columns(6);
+    padding-left: $padding-base;
+  }
+  .right {
+    @include span-columns(6);
+    padding-right: $padding-base;
+    text-align: right;
+  }
+}
 
 @-webkit-keyframes move-left {
   from {
@@ -76,4 +102,10 @@ a {
   to {
     background-position: 100% 50%;
   }
+}
+
+
+.half {
+  @include span-columns(6);
+  display: inline-block;
 }

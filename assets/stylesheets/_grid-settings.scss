@@ -33,7 +33,8 @@ $max-width: em(700);
 $visual-grid: false;
 
 // Define your breakpoints
-$big-screen: new-breakpoint(max-width 1673px 12);
+$big-screen: new-breakpoint(min-width 1673px 12);
+$small-screen: new-breakpoint(max-width 1280px 12);
 $ipad: new-breakpoint(max-width 991px 12);
 $tablet: new-breakpoint(max-width 768px 9);
 $phone: new-breakpoint(max-width 580px 6);

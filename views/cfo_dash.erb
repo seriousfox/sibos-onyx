@@ -1,61 +1,99 @@
-<div class="row">
-  <%= partial(:'partials/accounts_summary') %>
-  <div class="alerts">
-    <div class="alert-notify">
-      <h3 class="red-text">7 Alerts</h3>
-      <a href="" class="view-more">
-        View More
-      </a>
-    </div>
-    <ul class="alert-lists">
-      <a href="">
-        <li class="red">
-          <h3>
-            2 Payments awaiting approval
-          </h3>
-        </li>
-      </a>
-      <a href="/car-sales">
-        <li class="red alert-comment">
-          <h3>
-            Car Sales down in Q3
-          </h3>
-          <span class="red-text">
-            Cashflow impact possibility: 74%
-          </span>
-        </li>
-      </a>
-      <a href="">
-        <li class="red">
-          <h3>
-            3 invoices PMT due
-          </h3>
-        </li>
-      </a>
-    </ul>
+<div class="app-padding">
+  <div class="row">
+    <%= partial(:'partials/accounts_summary') %>
+    <section class="alerts">
+      <div class="alert-notify">
+        <h3 class="red-text">6 Alerts</h3>
+        <a href="" class="view-more">
+          View More
+        </a>
+      </div>
+      <ul class="alert-lists">
+        <a href="">
+          <li class="red">
+            <h3>
+              2 Payments awaiting approval
+            </h3>
+          </li>
+        </a>
+        <a href="/car-sales">
+          <li class="red alert-comment">
+            <h3>
+              Car Sales down in Q3
+            </h3>
+            <span class="red-text">
+              Cashflow impact possibility: 74%
+            </span>
+          </li>
+        </a>
+        <a href="">
+          <li class="red">
+            <h3>
+              3 invoices PMT due
+            </h3>
+          </li>
+        </a>
+        <a href="" id="reply">
+          <li class="im-block has-action">
+            <div class="im-photo">
+              <div class="small-user-container">
+                <img class="person-image" src="<%= image_path 'robert.jpg' %>" alt="">
+              </div>
+            </div>
+            <div class="im-content">
+              <h4>
+                <b>
+                  Message from Robert:
+                </b>
+              </h4>
+              <p>
+                We had an Early payment from client ABC
+              </p>
+            </div>
+            <div class="im-time">
+              Today 08:01
+            </div>
+            <div class="im-action">
+              RECOMMENDED ACTION: REPLY
+            </div>
+          </li>
+        </a>
+      </ul>
+    </section>
+  </div>
+  <div class="row">
+    <section class="recommendations">
+      <h3 class="yellow-text">
+        2 Recommendations
+      </h3>
+      <ul class="recommendation-list">
+        <a href="">
+          <li>
+            <h3>
+              Make NYC Building Loan INT Pmt today
+            </h3>
+          </li>
+        </a>
+        <a href="">
+          <li>
+            <h3>
+              Invest excess cash from AED to USD sweep
+            </h3>
+          </li>
+        </a>
+      </ul>
+      <div class="view-more">
+        View All Recommendations
+      </div>
+    </section>
+    <section class="info-tables">
+      <div class="half">
+        <%= partial(:'partials/currency_table') %>
+      </div>
+      <div class="half">
+        <%= partial(:'partials/libor_table') %>
+      </div>
+    </section>
   </div>
 </div>
-<div class="recommendations">
-  <h3 class="yellow-text">
-    2 Recommendations
-  </h3>
-  <span class="view-all">
-    View All
-  </span>
-  <ul class="recommendation-list">
-    <a href="">
-      <li>
-        <h3>
-          Make NYC Building Loan INT Pmt today
-        </h3>
-      </li>
-    </a>
-    <a href="">
-      <li>
-        <h3>
-          Invest excess cash from AED to USD sweep
-        </h3>
-      </li>
-    </a>
-  </ul>
-</div>
+<%= partial(:'partials/susan') %>

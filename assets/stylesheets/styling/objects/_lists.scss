@@ -45,6 +45,7 @@
   float: right;
   text-align: right;
   color: $ice-blue-softer;
+  font-size: rem(14px);
   &:hover {
     border-bottom: 1px solid $border-teal;
   }
@@ -54,49 +55,50 @@
   @include span-columns(6);
   @include omega();
   margin-top: $padding-base/4;
+}
+.alert-notify {
+  @extend %clearing-block;
+}
 
-  .alert-notify {
-    @extend %clearing-block;
-    .red-text {
-      float: left;
+.red-text {
+  float: left;
+}
+
+.alert-lists {
+  margin-top: $padding-base/4;
+  clear: both;
+  a {
+    margin-bottom: $padding-base/2;
+    display: block;
+    &:last-child {
+      margin-bottom: 0px;
     }
   }
-  .alert-lists {
-    margin-top: $padding-base/4;
-    clear: both;
-    a {
-      margin-bottom: $padding-base/2;
-      display: block;
-      &:last-child {
-        margin-bottom: 0px;
-      }
+  li {
+    @extend %clearfix;
+    padding: $padding-base;
+    position: relative;
+    @include transition(all 0.2s ease-in);
+    h3 {
+      color: $ice-blue-softer;
     }
-    li {
-      @extend %clearfix;
-      padding: $padding-base;
-      position: relative;
-      @include transition(all 0.2s ease-in);
-      h3 {
-        color: $ice-blue-softer;
-      }
 
-    }
   }
-  .alert-comment {
-    &:before {
-      @extend %transition-base;
-      @extend %vertical-align;
-      content: 'Recommendations available';
-      position: absolute;
-      right: $padding-base;
-      text-transform: uppercase;
-      color: $yellow;
-      font-weight: $semibold;
-      opacity: 0.3;
-    }
-    &:hover:before {
-      opacity: 0.6;
-    }
+}
+.alert-comment {
+  &:before {
+    @extend %transition-base;
+    @extend %vertical-align;
+    content: 'Recommendations available';
+    position: absolute;
+    right: $padding-base;
+    text-transform: uppercase;
+    color: $yellow;
+    font-weight: $semibold;
+    opacity: 0.3;
+  }
+  &:hover:before {
+    opacity: 0.6;
   }
 }
 
@@ -108,15 +110,14 @@ li {
     background-color: rgba($red, 0.6);
     @include transform(scale(1.03,1.03));
   }
+  &.im-block {
+    background-color: $ice-panel;
+  }
 }
 
 .recommendations {
-  .yellow-text, .view-all {
-    display: inline-block;
-    vertical-align: middle;
-  }
+  @include span-columns(5);
   .recommendation-list {
-    clear: both;
     margin-top: $padding-base/4;
     a {
       display: block;
@@ -125,7 +126,12 @@ li {
       margin-bottom: $padding-base;
       h3 {
         font-weight: $semibold;
+        font-size: rem(21px)
+      }
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
 }
+
