@@ -23,12 +23,12 @@
   position: relative;
   top: 50%;
   @include transform(translateY(-50%) scale(1,1));
-  @include animation(scale-and-move-up 2s cubic-bezier(0.550, 0.055, 0.675, 0.190));
-  @include animation-delay(5.3s);
+  @include animation(scale-and-move-up 1s cubic-bezier(0.550, 0.055, 0.675, 0.190));
+  @include animation-delay(2.1s);
   @include animation-fill-mode(forwards);
   .onyx-splash-logo {
     position: relative;
-    @include animation(wipe 6s ease);
+    @include animation(wipe 2s ease);
     @include animation-fill-mode(forwards);
     -webkit-mask-size: 225% 100%;
     -webkit-mask-position: 275% 0%;
@@ -52,9 +52,9 @@
 
 .login-splash-wrapper {
   @include col(6, 3, $ipad, 8, 2);
-  @include animation(top-wipe 3s ease);
+  @include animation(top-wipe 1s ease);
   @include animation-fill-mode(forwards);
-  @include animation-delay(7.5s);
+  @include animation-delay(2.8s);
   position: relative;
   -webkit-mask-size: 100% 200%;
   -webkit-mask-position: 0% 100%;
