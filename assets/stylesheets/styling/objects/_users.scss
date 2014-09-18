@@ -21,19 +21,7 @@
 
 .small-user-container {
   background-color: $teal;
-  box-shadow: $no-glow;
   line-height: 0.3;
-  img {
-    opacity: 0.9;
-    @include transition(opacity 0.2s ease);
-  }
-  &:hover {
-    cursor: pointer;
-    box-shadow: $teal-glow;
-    img {
-      opacity: 1;
-    }
-  }
 }
 // Only add hover events to anchors
 .user-photo-container:hover {

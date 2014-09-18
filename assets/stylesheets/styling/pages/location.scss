@@ -8,7 +8,7 @@
   .user-photo-container {
     border: 1px dotted $border-ice-blue;
     position: absolute;
-    border:1px solid 
+    border:1px solid
   }
 
   .map-locator {
@@ -17,7 +17,7 @@
     width:1024px;
     margin:40px auto;
     .map {
-      
+
     }
   }
 }
@@ -26,7 +26,7 @@
   position: absolute;
   bottom: 10px;
   left:0;
-  width:800px;
+  width:40%;
   text-align: center;
   img {
     opacity: 0.6;
@@ -35,5 +35,8 @@
     img {
       opacity: 0.2;
     }
+  }
+  h4 {
+    opacity: 0.2
   }
 }
