@@ -1,31 +1,40 @@
 <div class="payments_research">
   <div class="top-nav">
   <h4 class="left">
-    Taking recommended action: Research Payments
+    MY recommended actions
   </h4>
-  <a href="/susan" class="right">
+  <a href="/robert" class="right">
     <h4>
       < Return to Dashboard
     </h4>
   </a>
   </div>
-  <div class="row message-header">
-    <div class="user-photo-container">
-      <img src="<%= image_path 'susan.jpg' %>" alt="">
-    </div>
-    <div class="message-info">
-      <h3>
-        <b>
-          Message from Susan:
-        </b>
-      </h3>
-      <p>We had an early payment from client ABC</p>
-    </div>
-    <span class="date">Today: 02:30</span>
-  </div>
-  <div class="recommended-action">
-    <h4>Recommended Action: Research Payments</h4>
-  </div>
+
+  <ul class="alert-lists big">
+    <li class="im-block has-action">
+      <div class="im-photo">
+        <div class="small-user-container">
+          <img class="person-image" src="<%= image_path 'robert.jpg' %>" alt="">
+        </div>
+      </div>
+      <div class="im-content">
+        <h4>
+          <b>
+            Message from Robert:
+          </b>
+        </h4>
+        <p>
+          We had an Early payment from client ABC
+        </p>
+      </div>
+      <div class="im-time">
+        Today 08:01
+      </div>
+      <div class="im-action">
+        RECOMMENDED ACTION: RESEARCH PAYMENT
+      </div>
+    </li>
+  </ul>
 
   <div class="row">
     <div class="payment-tool">
@@ -75,3 +84,4 @@
 
 </div>
 <%= partial(:'partials/dashboards_bg') %>
+<%= partial(:'partials/robert') %>

@@ -2,6 +2,12 @@
   @include transform(scale(1,1));
   background-color: $red-panel;
 }
+.big li.im-block:hover {
+  background-color: $ice-panel;
+}
+.big li .im-photo {
+  width: 50px;
+}
 .alert-recommendation {
   @include span-columns(6);
   padding: $padding-base;
@@ -41,6 +47,7 @@
     }
     .active {
       background: rgba($teal, 0.6);
+      @include transform(scale(1.03,1.03));
     }
 
     h4 {
