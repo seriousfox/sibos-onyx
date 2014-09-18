@@ -9,9 +9,15 @@
 
 %clearing-block {
   width: 100%;
-  clear: both;
   display: block;
+  clear: both;
   float: left;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
 %vertical-align {
@@ -39,4 +45,8 @@
 
 %button {
 
+}
+
+%transition-base {
+  @include transition(all 0.3s ease-in-out);
 }
