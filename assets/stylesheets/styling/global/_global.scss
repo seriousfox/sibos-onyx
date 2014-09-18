@@ -18,16 +18,20 @@ html {
 a {
   color: $ice-blue-softer;
 }
+.app-padding {
+  padding: $gutter;
 
+
+}
 .application {
-  z-index: 1;
+  @extend %clearfix;
+  z-index: 999;
   width: 100%;
   height: 100%;
   position: absolute;
-  padding: $gutter;
 }
 .background {
-  z-index: 2;
+  pointer-events: none;
 }
 .row {
   @extend %clearing-block;

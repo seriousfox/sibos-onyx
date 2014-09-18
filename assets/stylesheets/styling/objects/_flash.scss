@@ -1,4 +1,4 @@
-$flash-default-background: #87b848;
+$flash-default-background: $green;
 $flash-height: 75px;
 
 .flash {
@@ -29,11 +29,11 @@ $flash-height: 75px;
 
 
 @include keyframes(show-flash) {
-  from { 
+  from {
     opacity: 0;
     @include transform(scale(0) translateY(10px));
   }
-  to { 
+  to {
     @include transform(scale(1) translateY(0px));
     opacity: 1;
   }

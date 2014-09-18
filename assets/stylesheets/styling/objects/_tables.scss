@@ -37,3 +37,36 @@
     }
   }
 }
+.plan-table {
+  font-size: rem(14px);
+  width: 100%;
+  background-color: $transparent-panel;
+  margin-bottom: $padding-base/2;
+  border-collapse: collapse;
+  th, td {
+    padding: $padding-base/4;
+    text-align: right;
+    border: 1px solid rgba($ice-blue-softer,0.03);
+  }
+  th {
+    background-color: rgba(0,0,0,0.1);
+  }
+}
+table {
+  font-size: rem(14px);
+}
+
+.rest-table {
+  width: 100%;
+  font-size: rem(12px);
+  background-color: $transparent-panel;
+  border-collapse: collapse;
+  th, td {
+    text-align: right;
+    padding: $padding-base/5;
+    border: 1px solid rgba($ice-blue-softer,0.03);
+  }
+  th {
+    background-color: rgba(0,0,0,0.1);
+  }
+}

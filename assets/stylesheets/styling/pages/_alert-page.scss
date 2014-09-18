@@ -1,3 +1,7 @@
+.big li:hover {
+  @include transform(scale(1,1));
+  background-color: $red-panel;
+}
 .alert-recommendation {
   @include span-columns(6);
   padding: $padding-base;
@@ -21,6 +25,7 @@
       display: block;
       padding: $padding-base/2;
       margin-bottom: $padding-base/2;
+      @include transition(all 0.2s ease-in);
       &:before {
         counter-increment: section;
         content: counter(section)'. ';
@@ -29,10 +34,15 @@
         font-size: rem(18px);
         font-weight: $bold;
       }
+      &:hover {
+        background-color: rgba($teal, 0.6);
+        @include transform(scale(1.03,1.03));
+      }
     }
-    .nothing {
-      background-color: $teal-panel;
+    .active {
+      background: rgba($teal, 0.6);
     }
+
     h4 {
       text-transform: none;
       max-width: 80%;
@@ -45,5 +55,53 @@
   padding: $padding-base;
   .graph-detail {
     max-height: 40%;
+  }
+  h3 {
+    padding-bottom: $padding-base/2
+  }
+
+  .rec-0, .rec-1, .rec-2 {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(opacity 0.2s ease-in-out);
+    &.show {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.plan-details {
+  h4 {
+    padding-bottom: $padding-base/4;
+    font-weight: $semibold;
+  }
+}
+
+
+.download-plan {
+  @extend %clearing-block;
+  position: relative;
+  padding-bottom: $padding-base/2;
+  .icon {
+    @include span-columns(1);
+    img {
+      max-width: 100%;
+    }
+  }
+  .download-show {
+    @include position(absolute,0px 0px 0px 0px);
+    background-color: $green-panel;
+    text-align: center;
+    padding: $padding-base/2;
+    opacity: 0;
+    @extend %transition-base;
+  }
+  &:hover {
+    .download-show {
+      opacity: 1;
+    }
   }
 }

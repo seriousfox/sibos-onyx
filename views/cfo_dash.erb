@@ -1,4 +1,4 @@
-<div class="application">
+<div class="app-padding">
   <div class="row">
     <%= partial(:'partials/accounts_summary') %>
     <section class="alerts">
@@ -95,14 +95,5 @@
       </div>
     </section>
   </div>
-  <div class="logged-in">
-    <div class="user-account">
-      <div class="small-user-container">
-        <img src="<%= image_path 'susan.jpg' %>" alt="">
-      </div>
-    </div>
-    <div class="user-id">
-      <h4>Susan Nicholson</h4>
-    </div>
-  </div>
 </div>
+<%= partial(:'partials/susan') %>

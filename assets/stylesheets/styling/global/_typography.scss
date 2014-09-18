@@ -54,7 +54,9 @@ h5 {
 p {
   font-size: 1rem;
 }
-
+b {
+  font-weight: $semibold;
+}
 aside {
   font-size: rem(12px);
   text-transform: uppercase;
