@@ -18,7 +18,7 @@
   // 1. Acquiring Location
   // 2. Maybe actually acquire the country
   // 2. Load a marker over london / SA
-    var options = {delay: 1000 };
+    var options = {delay: 1000, animationTime: 1500 };
     new App.progress('.progress-bar',options).start(function(){
       // Show a flash message
       var flash = new App.Flash('.flash').text('<h1>Location Acquired: London, UK 51.5072 N, 0.1275 W</h1>')

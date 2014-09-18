@@ -18,7 +18,8 @@ class App.progress
     opts = $.extend
       width: "+=100%"
       delay: 0
+      animationTime: 4000
     , @options
     @$meter.css('width': 0)
-    @$meter.delay(opts.delay).animate opts, 4000, 'swing',callback
+    @$meter.delay(opts.delay).animate opts, opts.animationTime, 'swing',callback
   
