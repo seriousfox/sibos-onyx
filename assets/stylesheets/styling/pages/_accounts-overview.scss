@@ -3,16 +3,21 @@
   @include span-columns(5);
   .overview-accounts {
     @extend %clearfix;
-    .stats-block {
-      @include span-columns(6);
+    text-align: right;
+    .stats-block,  {
+      @include span-columns(4);
+    }
+    .transactions-block {
+      @include span-columns(4);
+    }
+    .bold-numbers {
+      @include font($sans, rem(24px) , $xxbold, $ice-blue-softer)
+    }
+    aside {
+      border-top: 1px solid $border-teal;
+      float: right;
+      clear: both;
       text-align: right;
-      .bold-numbers {
-        @include font($sans, rem(33px) , $xxbold, $ice-blue-softer)
-      }
-      aside {
-        border-top: 1px solid $border-teal;
-        float: right;
-      }
     }
   }
 }

@@ -1,0 +1,49 @@
+.alert-recommendation {
+  @include span-columns(6);
+  padding: $padding-base;
+  border-right: 1px solid $border-transparent;
+  p {
+    font-size: rem(24px);
+    max-width: 80%;
+  }
+  .recommendation-options {
+    clear: both;
+    display: block;
+    padding-top: $padding-base*2;
+  }
+  .recommendation-blocks {
+    counter-reset: section;
+    li {
+
+    }
+    li a {
+      background-color: $ice-panel;
+      display: block;
+      padding: $padding-base/2;
+      margin-bottom: $padding-base/2;
+      &:before {
+        counter-increment: section;
+        content: counter(section)'. ';
+        float: left;
+        padding-right: $padding-base/2;
+        font-size: rem(18px);
+        font-weight: $bold;
+      }
+    }
+    .nothing {
+      background-color: $teal-panel;
+    }
+    h4 {
+      text-transform: none;
+      max-width: 80%;
+    }
+  }
+}
+.alert-detail {
+  @include span-columns(6);
+  @include omega();
+  padding: $padding-base;
+  .graph-detail {
+    max-height: 40%;
+  }
+}
