@@ -23,7 +23,6 @@
 // </div>
 
 .payments_research {
-  margin:0 -20px;
   .controls {
     padding:0 20px;
     // @include span-columns(12);
@@ -42,6 +41,7 @@
   .payment-tool {
     margin-top: 20px;
     @include span-columns(6);
+    border-right: 1px solid $border-transparent;
     h2 {
       padding: 20px;
     }
@@ -51,7 +51,7 @@
   }
   .results {
     margin-top: 20px;
-    @include span-columns(6); 
+    @include span-columns(6);
     .details {
       margin-right: 20px;
       tr {
@@ -62,7 +62,7 @@
       margin-top: 20px;
       margin-right: 20px;
       background:$black-panel;
-      border-radius:$base-border-radius;
+      border-radius:$border-base-radius;
       padding:10px;
     }
 
