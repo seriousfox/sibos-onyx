@@ -21,7 +21,7 @@ table {
   border-left: 0px;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: $base-border-radius;
+  border-radius: $border-base-radius;
 
   tbody {
     background-color: $table-background;
@@ -38,21 +38,21 @@ table {
 
   thead:first-of-type {
     tr:first-child > th:first-child {
-      border-top-left-radius: $base-border-radius;
+      border-top-left-radius: $border-base-radius;
     }
 
     tr:first-child > th:last-child {
-      border-top-right-radius: $base-border-radius;
+      border-top-right-radius: $border-base-radius;
     }
   }
 
   tbody:last-child {
     tr:last-child > td:first-child {
-      border-bottom-left-radius: $base-border-radius;
+      border-bottom-left-radius: $border-base-radius;
     }
 
     tr:last-child > td:last-child {
-      border-bottom-right-radius: $base-border-radius;
+      border-bottom-right-radius: $border-base-radius;
     }
   }
 
