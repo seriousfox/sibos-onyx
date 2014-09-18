@@ -31,4 +31,9 @@
   img {
     opacity: 0.6;
   }
+  &.darker {
+    img {
+      opacity: 0.2;
+    }
+  }
 }

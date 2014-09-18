@@ -1,0 +1,81 @@
+// <div class="payments_research">
+//   <div class="row">
+//     <h2>
+//       Taking Recommendation From IM
+//     </h2>
+//     <h2>
+//       <a href="#" class="return">Return to Dashboard</a>
+//     </h2>
+//   </div>
+//   <div class="row message-header">
+//     <div class="user-photo-container">
+//       <img src="<%= image_path 'susan.jpg' %>" alt="">
+//     </div>
+//     <div class="message-info">
+//       <h2>Message from Susan:</h2>
+//       <p>We had an early payment from client ABC</p>
+//     </div>
+//     <span class="date">Today: 02:30</span>
+//   </div>
+//   <div class="recommended-action">
+//     <h2>Recommended Action: Research Payments</h2>
+//   </div>
+// </div>
+
+.payments_research {
+  margin:0 -20px;
+  .controls {
+    padding:0 20px;
+    // @include span-columns(12);
+    h2 {
+      @include span-columns(6);
+      font-weight: $semibold;
+      float: left;
+    }
+    .return {
+      @include span-columns(6);
+      float: right;
+      text-align: right;
+    }
+  }
+
+  .payment-tool {
+    margin-top: 20px;
+    @include span-columns(6);
+    h2 {
+      padding: 20px;
+    }
+    form {
+      padding:0 20px;
+    }
+  }
+  .results {
+    margin-top: 20px;
+    @include span-columns(6); 
+    .details {
+      margin-right: 20px;
+      tr {
+        cursor: pointer;
+      }
+    }
+    .reason {
+      margin-top: 20px;
+      margin-right: 20px;
+      background:$black-panel;
+      border-radius:$base-border-radius;
+      padding:10px;
+    }
+
+  }
+}
+
+// TODO: Extract
+.recommended-action {
+  @include span-columns(12);
+  border-top: 1px solid $border-teal;
+  background:$teal-panel;
+  padding:10px;
+  h2 {
+    padding:0;
+  }
+}

@@ -49,4 +49,7 @@ class App < Sinatra::Base
   get "/robert" do
     erb :acct_man_dash
   end
+  get "/payment_research" do
+    erb :payment_research
+  end
 end

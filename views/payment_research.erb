@@ -1,0 +1,71 @@
+<div class="payments_research">
+  <div class="row controls">
+    <h2>
+      Taking Recommendation From IM
+    </h2>
+    <h2>
+      <a href="#" class="return">Return to Dashboard</a>
+    </h2>
+  </div>
+  <div class="row message-header">
+    <div class="user-photo-container">
+      <img src="<%= image_path 'susan.jpg' %>" alt="">
+    </div>
+    <div class="message-info">
+      <h2>Message from Susan:</h2>
+      <p>We had an early payment from client ABC</p>
+    </div>
+    <span class="date">Today: 02:30</span>
+  </div>
+  <div class="recommended-action">
+    <h2>Recommended Action: Research Payments</h2>
+  </div>
+  
+  <div class="row">
+    <div class="payment-tool">
+      <h2>Payment Research Tool</h2>
+      <form action="">
+
+        <input type="date" placeholder="Date">
+        <input type="text" placeholder="Account No.">
+        <input type="text" placeholder="Amount">
+        <input type="text" placeholder="Currency">
+        <input type="text" placeholder="Beneficiary">
+        <input type="text" placeholder="Country">
+
+      </form>
+    </div>
+
+    <div class="results">
+      <div class="details">
+        <h2>Payment Details</h2>
+        <table class="table-borders">
+          <thead>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Beneficiary</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>20/09/2014</td>
+              <td>20,000 AED</td>
+              <td>AED Operating</td>
+            </tr>
+            <tr>
+              <td>22/09/2014</td>
+              <td>10,000 AED</td>
+              <td>AED Operating</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reason">
+        <h2>Payment Reason</h2>
+        <p>Payment for Invoice 00013 was made early and vendor took 5% discount.</p>
+        <p>Payment received 30 days before due date.</p>
+      </div>
+    </div>  
+  </div>
+  
+</div>
+
