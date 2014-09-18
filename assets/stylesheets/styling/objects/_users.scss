@@ -9,7 +9,7 @@
   overflow: hidden;
   box-shadow: $no-glow;
   @include transition(all 0.2s ease);
-  
+
   img {
     @include position(absolute, 0px 0px 0px 0px);
     min-height: 100%;
@@ -18,11 +18,38 @@
     @include transition(opacity 0.2s ease);
   }
 }
+
+.small-user-container {
+  background-color: $teal;
+  line-height: 0.3;
+}
 // Only add hover events to anchors
-a.user-photo-container:hover {
+.user-photo-container:hover {
   cursor: pointer;
   box-shadow: $teal-glow;
   img {
     opacity: 1;
+  }
+}
+
+.logged-in {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border: 1px solid rgba($ice-blue, 0);
+  padding: $padding-base/2;
+  background-color: rgba($teal, 0);
+  cursor: pointer;
+  @extend %transition-base;
+  .user-account {
+    width: 30px;
+  }
+  .user-id, .user-account  {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  &:hover {
+    border: 1px solid rgba($ice-blue, 0.3);
+    background-color: rgba($teal, 0.2);
   }
 }

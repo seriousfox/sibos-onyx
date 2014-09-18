@@ -5,18 +5,17 @@ $text-body-color: #444444;
 
 $base-border-color: #eee;
 //size variables
-$base-border-radius: 6;
-
 $base-font-size: 16px;
-
+$border-base-radius: rem(4px);
 $ice-blue: #90DED6;
 $ice-blue-softer: #cbeaf1;
 $teal: #00FFFC;
 $teal-dark: #90DED6;
 $yellow-light: #90DED6;
-$yellow: #90DED6;
-$red: #ed303c;
-$orange: #F69A63;
+$yellow: #ffd200;
+$red: #EA3442;
+$orange: #F17330;
+$green: #87b848;
 
 $base-gradient: #364A4A;
 $fail-gradient: #623928;
@@ -27,9 +26,17 @@ $padding-base: rem(20px);
 
 $black-panel: rgba(0,0,0,0.6);
 $transparent-panel: rgba(0,0,0,0.3);
+$red-panel: rgba(234,52,66,0.24);
+$teal-panel: rgba($teal, 0.3);
+$teal-light-panel: rgba($teal, 0.1);
+
+$ice-panel: rgba($ice-blue, 0.3);
+$clear-panel: rgba($ice-blue, 0.6);
+$green-panel: rgba($green, 0.3);
 
 $border-teal: rgba($teal, 0.5);
 $border-ice-blue: rgba($ice-blue, 0.5);
+$border-transparent: rgba($teal, 0.2);
 
 $no-glow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 $teal-glow: 0px 0px 18px 0px rgba(44, 254, 251, 0.86);

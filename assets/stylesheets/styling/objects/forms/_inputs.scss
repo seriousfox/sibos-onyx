@@ -33,15 +33,17 @@ textarea,
 #{$all-text-inputs} {
   @include box-sizing(border-box);
   @include transition(border-color);
-  background-color: white;
+  color:#fff;
+  background-color: rgba(0,0,0,0.5);
   border-radius: $form-border-radius;
   border: 1px solid $form-border-color;
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
-  padding: 5px;
+  padding: 7px;
   height: 35px;
-
+  margin-bottom: 15px;
+  min-width: 70%;
   &:hover {
     border-color: $form-border-color-hover;
   }
@@ -51,11 +53,13 @@ textarea,
     box-shadow: $form-box-shadow-focus;
     outline: none;
   }
+  @include placeholder {
+    color: $ice-blue-softer;
+  }
 }
 input[type="text"] {
   @include appearance(none);
   height: 35px;
-  padding: 7px;
 }
 input[type="search"] {
   @include appearance(none);
@@ -65,8 +69,8 @@ input[type="checkbox"], input[type="radio"] {
   display: inline;
 }
 input[type="date"] {
+  color:#fff;
   height: 35px;
-  padding: 5px;
   background-image: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -85,7 +89,7 @@ select {
   height: 35px;
   overflow: hidden;
   background: image-url('select.png') no-repeat right #ddd;
-  border-radius: $base-border-radius;
+  border-radius: $border-base-radius;
   background-color: white;
   border: 1px solid $base-border-color;
   z-index: 99;
@@ -137,5 +141,20 @@ select {
   }
   input[type=checkbox]:checked + label:after {
     opacity: 1;
+  }
+}
+
+.button {
+  padding: $padding-base/2;
+  border-radius: $border-base-radius;
+  border: 1px solid $green;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: $semibold;
+  background-color: rgba($green,0);
+  @extend %transition-fast;
+  &:hover {
+    background-color: $green;
   }
 }

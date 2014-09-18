@@ -1,0 +1,22 @@
+.payment-spikes {
+  @include span-columns(5);
+}
+.payment-spike-list {
+  @extend %clearfix;
+  margin-top: $padding-base/4;
+  background: $transparent-panel;
+  li {
+    padding:$padding-base;
+    &:hover {
+      background-color: $teal-panel;
+      // @include transform(scale(1.03,1.03));
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  h3 {
+    font-weight: $semibold;
+    font-size: rem(22px);
+  }
+}

@@ -35,7 +35,9 @@ h2 {
 }
 
 h3 {
-
+  font-size: rem(21px);
+  text-transform: uppercase;
+  font-weight: $light;
 }
 
 h4 {
@@ -50,15 +52,26 @@ h5 {
 }
 
 p {
-
+  font-size: 1rem;
 }
-
+b {
+  font-weight: $semibold;
+}
 aside {
-  font-size: rem(14px);
+  font-size: rem(12px);
   text-transform: uppercase;
   color: $ice-blue-softer;
 }
 
 blockquote {
 
+}
+
+.red-text {
+  @extend %transition-base;
+  color: $red;
+}
+.yellow-text {
+  @extend %transition-base;
+  color: $yellow;
 }

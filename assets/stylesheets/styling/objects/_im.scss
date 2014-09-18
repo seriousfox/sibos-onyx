@@ -1,0 +1,31 @@
+.im-action {
+  position: absolute;
+  width: 100%;
+  background-color: $teal-panel;
+  bottom: -$padding-base*2;
+  padding: $padding-base/2;
+  left: 0;
+  right: 0;
+  font-size: rem(16px)
+}
+.im-photo {
+  @include span-columns(1);
+}
+.im-content {
+  display: table-cell;
+}
+.im-time {
+  position: absolute;
+  font-size: rem(12px);
+  top: $padding-base;
+  right: $padding-base;
+}
+.has-action {
+  margin-bottom: $padding-base*3;
+}
+.im-block {
+  &:hover{
+    background-color: rgba($ice-blue, 0.4);
+    @include transform(scale(1.03,1.03));
+  }
+}

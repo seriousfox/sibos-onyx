@@ -1,0 +1,99 @@
+<div class="app-padding">
+
+  <div class="row">
+    <%= partial(:'partials/accounts_summary') %>
+    <div class="alerts">
+      <div class="alert-notify">
+        <h3 class="red-text">7 Alerts</h3>
+        <a href="" class="view-more">
+          View More
+        </a>
+      </div>
+      <ul class="alert-lists">
+        <a href="">
+          <li class="red">
+            <h3>
+              2 Payments awaiting approval
+            </h3>
+          </li>
+        </a>
+
+        <a href="">
+          <li class="red">
+            <h3>
+              3 invoices PMT due
+            </h3>
+          </li>
+        </a>
+        <a href="/payment_research">
+          <li class="im-block has-action">
+            <div class="im-photo">
+              <div class="small-user-container">
+                <img class="person-image" src="<%= image_path 'susan.jpg' %>" alt="">
+              </div>
+            </div>
+            <div class="im-content">
+              <h4>
+                <b>
+                  Message from Susan:
+                </b>
+              </h4>
+              <p>
+                Why is there excess cash in the AED operating account?
+              </p>
+            </div>
+            <div class="im-time">
+              Today 06:05
+            </div>
+            <div class="im-action">
+              RECOMMENDED ACTION: RESEARCH PAYMENTS
+            </div>
+          </li>
+        </a>
+        <a href="">
+          <li class="im-block has-action">
+            <div class="im-photo">
+              <div class="small-user-container">
+                <img class="person-image" src="<%= image_path 'susan.jpg' %>" alt="">
+              </div>
+            </div>
+            <div class="im-content">
+              <h4>
+                <b>
+                  Message from Susan:
+                </b>
+              </h4>
+              <p>
+                Ok, move $xx,xxx.xx to the overnight sweep account
+              </p>
+            </div>
+            <div class="im-time">
+              Today 08:01
+            </div>
+            <div class="im-action">
+              RECOMMENDED ACTION: MAKE TRANSFER
+            </div>
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+  <div class="payment-spikes">
+    <h3 class="yellow-text">
+      Payment "Spike"
+    </h3>
+    <ul class="payment-spike-list">
+      <li>
+        <h3>
+          Payment to Vendor #1234 for $XX,XXXX,XX
+        </h3>
+        <h4>Processed: <span>20/09/2014</span></h4>
+        <h4>Approved: <span>21/09/2014</span></h4>
+        <h4>Recieved: <span>22/09/2014</span></h4>
+      </li>
+    </ul>
+  </div>
+  <%= partial(:'partials/dashboards_bg') %>
+  <%= partial(:'partials/robert') %>
+</div>
