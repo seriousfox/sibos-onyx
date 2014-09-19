@@ -68,12 +68,6 @@ a {
   opacity: 0.2;
 }
 
-.tech-lines {
-  @include position(fixed, 0px 0px 0px 0px);
-  background: image-url('lines.svg') no-repeat;
-  background-size: 150% 150%;
-  background-position: 0%, 50%;
-}
 .top-nav {
   padding-top: $padding-base/2;
   padding-bottom: $padding-base/4;
