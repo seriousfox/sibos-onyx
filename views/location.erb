@@ -8,9 +8,9 @@
   </div>
   <div class="map-locator">
     <div class="ping"></div>
-    <img class="map" src="<%= image_path 'worldmap.svg' %>">  
+    <img class="map" src="<%= image_path 'worldmap.svg' %>">
   </div>
-  
+
 </div>
 
 
@@ -21,14 +21,14 @@
     var options = {delay: 1000, animationTime: 1500 };
     new App.progress('.progress-bar',options).start(function(){
       // Show a flash message
-      var flash = new App.Flash('.flash').text('<h1>Location Acquired: London, UK 51.5072 N, 0.1275 W</h1>')
+      var flash = new App.Flash('.flash').text('<h1>Location Acquired: BOSTON, USA 42.3581° N, 71.0636° W</h1>')
       flash.$el.one('completed',function(){
         // TODO: Timeout shouldn't be needed completed should have a wait instead
         setTimeout(function(){
-          $.pjax({url: '/face', container: '.application'})  
+          $.pjax({url: '/face', container: '.application'})
           flash.hide()
         },1500)
-        
+
       })
       flash.show();
     })

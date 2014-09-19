@@ -8,6 +8,7 @@
     margin-bottom: $padding-base/4;
     display: block;
     opacity: 0.4;
+    @extend %transition-fast;
     &:hover {
       opacity: 0.8;
       @include transform(scale(1.2,1.2));

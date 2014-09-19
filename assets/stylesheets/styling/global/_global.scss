@@ -1,5 +1,5 @@
 body {
-  //@include background-image( linear-gradient(to top, $base-gradient, #000000));
+  //@include background-image( linear-gradient(to top, #757F83, #06202A));
   background: image-url('bg.png');
   background-size: cover;
   font-size: 16px;
@@ -7,6 +7,9 @@ body {
   font-family: $sans;
   -webkit-font-smoothing: antialiased;
   height: 100%;
+}
+.blur-wrapper {
+  @extend %transition-base;
 }
 .blur {
   @include filter(blur(2px));
@@ -53,6 +56,7 @@ a {
   background: image-url('dots1.png');
   background-repeat: repeat-x;
   background-position: 0% center;
+  opacity: 0.2;
 
 }
 
@@ -62,21 +66,14 @@ a {
   background: image-url('dots2.png');
   background-repeat: repeat-x;
   background-position: 100% center;
+  opacity: 0.2;
 }
-
-// @include keyframes(lines-bounce) {
-//   from { background-size: 150% 150%;}
-//   to { background-size: 100% 100%;}
-// }
 
 .tech-lines {
   @include position(fixed, 0px 0px 0px 0px);
   background: image-url('lines.svg') no-repeat;
   background-size: 150% 150%;
   background-position: 0%, 50%;
-  /* @include animation(lines-bounce 75s ease);
-  @include animation-iteration-count(infinite);
-  @include animation-direction(alternate-reverse) */
 }
 .top-nav {
   padding-top: $padding-base/2;
