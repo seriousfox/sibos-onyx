@@ -47,3 +47,15 @@ $ ->
 
   $(document).on 'click', '.details tr', (e) ->
     $('.reason').removeClass('animated').addClass('animated')
+
+  $(document).on 'click', '#submit-transfer', (e) ->
+    e.preventDefault()
+    flash = new App.Flash('.flash').text('<h1>Payment Submitted</h1>')
+    flash.$el.one 'completed', ->
+      # TODO: Timeout shouldn't be needed completed should have a wait instead
+      setTimeout( ->
+        $.pjax({url: '/robert', container: '.application'})
+        flash.hide()
+      ,1500)
+
+    flash.show();

@@ -36,7 +36,7 @@
     </li>
   </ul>
 
-  <div class="payment-cards">
+  <div class="payment-cards blur-wrapper">
     <ul id="from" class="connected">
       <li>
         <h2>Acc No. 2016472</h2>
@@ -94,8 +94,12 @@
     hoverClass: "ui-state-hover",
     drop: function(event, ui) {        
       $(ui.helper).fadeOut()
+      $('.modal-overlay').removeClass('scale-fade')
+      $('.blur-wrapper').addClass('blur')
+      $('.modal-overlay').addClass('modal-insert')
     }
   });
 </script>
 <%= partial(:'partials/dashboards_bg') %>
 <%= partial(:'partials/robert') %>
+<%= partial(:'partials/make_transfer_modal') %>
