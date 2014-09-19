@@ -18,14 +18,14 @@
   // 1. Acquiring Location
   // 2. Maybe actually acquire the country
   // 2. Load a marker over london / SA
-    var options = {delay: 1000, animationTime: 1500 };
+    var options = {delay: 500, animationTime: 1500 };
     new App.progress('.progress-bar',options).start(function(){
       // Show a flash message
       var flash = new App.Flash('.flash').text('<h1>Location Acquired: BOSTON, USA 42.3581° N, 71.0636° W</h1>')
       flash.$el.one('completed',function(){
         // TODO: Timeout shouldn't be needed completed should have a wait instead
         setTimeout(function(){
-          $.pjax({url: '/face/<%= @user %>', container: '.application'})  
+          $.pjax({url: '/voice/<%= @user %>', container: '.application'})
           flash.hide()
         },1500)
 
