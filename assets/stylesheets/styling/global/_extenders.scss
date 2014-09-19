@@ -48,7 +48,7 @@
 }
 
 %transition-base {
-  @include transition(all 0.3s ease-in-out);
+  @include transition(all 0.2s ease-in-out);
 }
 
 %transition-fast {

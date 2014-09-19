@@ -1,12 +1,14 @@
 .app-bar {
   @include span-columns(1);
   position: absolute;
+  background-color: $transparent-panel;
   right: 0px;
   padding: $padding-base/2;
   a {
     margin-bottom: $padding-base/4;
     display: block;
     opacity: 0.4;
+    @extend %transition-fast;
     &:hover {
       opacity: 0.8;
       @include transform(scale(1.2,1.2));
