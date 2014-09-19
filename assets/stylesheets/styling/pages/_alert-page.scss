@@ -31,7 +31,7 @@
       display: block;
       padding: $padding-base/2;
       margin-bottom: $padding-base/2;
-      @include transition(all 0.2s ease-in);
+      @include transition(all 0.1s ease-in);
       &:before {
         counter-increment: section;
         content: counter(section)'. ';
