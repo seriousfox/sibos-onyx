@@ -1,10 +1,9 @@
 table {
   width:100%;
   font-size: rem(14px);
-  thead {
-    background:$teal-light-panel;
-  }
+
 }
+
 
 
 .table-borders {
@@ -22,7 +21,9 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   border-radius: $border-base-radius;
-
+  thead {
+    background:$teal-light-panel;
+  }
   tbody {
     background-color: $table-background;
     tr:hover > td, tr:hover > th {

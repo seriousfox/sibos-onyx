@@ -68,14 +68,16 @@
 
   .rec-0, .rec-1, .rec-2 {
     display: none;
-    visibility: hidden;
     opacity: 0;
-    @include transition(opacity 0.2s ease-in-out);
+    height: 0px;
+    @include transition(opacity 0.1s ease-in-out);
     &.show {
-      display: block;
-      visibility: visible;
       opacity: 1;
+      display: block;
     }
+  }
+  .button {
+    float: right;
   }
 }
 
@@ -109,5 +111,14 @@
     .download-show {
       opacity: 1;
     }
+  }
+}
+
+.transfer-animation {
+  @extend %clearing-block;
+  .usd-structure {
+    @include span-columns(6);
+    border: 1px dotted $border-transparent;
+    padding: $padding-base/2;
   }
 }

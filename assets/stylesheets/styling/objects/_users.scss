@@ -1,12 +1,55 @@
+
+@include keyframes(flare) {
+  0% {
+    opacity: 0;
+    @include transform(rotate(0deg));
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    @include transform(rotate(-360deg));
+  }
+}
+.star-flare {
+  background-image: image-url('flare.png');
+  width: 210px;
+  height: 210px;
+  top: -24px;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+}
+
+.individual-photo-wrapper {
+  display: inline-block;
+  position: relative;
+  &:hover {
+    .star-flare {
+      @include animation(flare 1s ease);
+    }
+    .user-photo-container {
+      cursor: pointer;
+      box-shadow: $teal-glow;
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
 .user-photo-container {
   position: relative;
-  display: inline-block;
   opacity: 0.6;
   margin-right: $padding-base;
   background: $teal;
-  height: 257px;
+  height: 165px;
   width: 165px;
   overflow: hidden;
+  border-radius: 50%;
   box-shadow: $no-glow;
   @include transition(all 0.2s ease);
 
@@ -22,15 +65,12 @@
 .small-user-container {
   background-color: $teal;
   line-height: 0.3;
-}
-// Only add hover events to anchors
-.user-photo-container:hover {
-  cursor: pointer;
-  box-shadow: $teal-glow;
   img {
-    opacity: 1;
+    border-radius: 50%;
   }
 }
+// Only add hover events to anchors
+
 
 .logged-in {
   position: absolute;
@@ -42,7 +82,7 @@
   cursor: pointer;
   @extend %transition-base;
   .user-account {
-    width: 30px;
+    width: 50px;
   }
   .user-id, .user-account  {
     display: inline-block;

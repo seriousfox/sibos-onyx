@@ -9,11 +9,17 @@
     <div class="login-splash">
       <h2>Please Select user ID to begin</h2>
       <div class="user-photos-wrapper">
-        <a class="user-photo-container" href="/location/cfo">
+        <a href="/location/cfo" class="individual-photo-wrapper">
+          <div class="user-photo-container">
           <img class="person-image" src="<%= image_path 'susan.jpg' %>" alt="">
+          </div>
+          <div class="star-flare"></div>
         </a>
-        <a class="user-photo-container" href="/location/robert">
-          <img class="person-image" src="<%= image_path 'robert.jpg' %>" alt="">
+        <a href="/location/robert" class="individual-photo-wrapper">
+          <div class="user-photo-container" >
+            <img class="person-image" src="<%= image_path 'robert.jpg' %>" alt="">
+          </div>
+          <div class="star-flare"></div>
         </a>
       </div>
     </div>
