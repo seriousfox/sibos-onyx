@@ -1,5 +1,7 @@
 body {
-  @include background-image( linear-gradient(to top, $base-gradient, #000000));
+  //@include background-image( linear-gradient(to top, $base-gradient, #000000));
+  background: image-url('bg.png');
+  background-size: cover;
   font-size: 16px;
   color: $ice-blue-softer;
   font-family: $sans;
@@ -116,4 +118,12 @@ a {
 .double-border-wrapper {
   border: 3px double $border-teal;
   padding: $padding-base/4;
+}
+
+.line-work {
+  @include position(absolute, 0px 0px 0px 0px);
+  background: image-url('background/bg-lines.svg');
+  background-size: 100%;
+  background-position: top left;
+  opacity: 0.3;
 }

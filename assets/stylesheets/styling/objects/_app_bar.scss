@@ -1,6 +1,7 @@
 .app-bar {
   @include span-columns(1);
   position: absolute;
+  background-color: $transparent-panel;
   right: 0px;
   padding: $padding-base/2;
   a {
