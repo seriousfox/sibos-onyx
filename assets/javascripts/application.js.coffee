@@ -3,7 +3,7 @@
 
 $ ->
   allrecs = $('.rec-0, .rec-1, .rec-2')
-  allrecid = $('#rec-0, #rec-1, #rec-2')
+  allrecid = $('#rec-0, #rec-1, #rec-2, #rec-3, #rec-4')
   $(document).on 'click', '#rec-0', (e) ->
     e.preventDefault()
     allrecid.removeClass('active')
@@ -24,6 +24,11 @@ $ ->
     $(this).addClass('active')
     allrecs.removeClass('show')
     $('.rec-2').addClass('show')
+
+  $(document).on 'click', '#rec-4, #rec-3', (e) ->
+    e.preventDefault()
+    allrecid.removeClass('active')
+    $(this).addClass('active')
 
   $(document).on 'click', '.fake-radio-button', (e) ->
     e.preventDefault()

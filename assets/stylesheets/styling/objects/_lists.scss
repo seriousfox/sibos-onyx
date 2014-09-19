@@ -126,12 +126,17 @@ li {
       border-left: 4px solid $teal;
       padding-left: $padding-base/2;
       margin-bottom: $padding-base;
+      @extend %transition-base;
       h3 {
         font-weight: $semibold;
         font-size: rem(21px)
       }
       &:last-child {
         margin-bottom: 0;
+      }
+      &:hover {
+        text-shadow: $text-glow;
+        border-left: 14px solid $border-teal;
       }
     }
   }
