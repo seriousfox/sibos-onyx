@@ -129,14 +129,13 @@ table {
     background-color: rgba(0,0,0,0.1);
   }
 }
-.line-items {
-  margin-bottom: $padding-base/2;
-}
+
 .rest-table, .line-items {
   width: 100%;
   font-size: rem(12px);
   background-color: $transparent-panel;
   border-collapse: collapse;
+  margin-bottom: $padding-base/2;
   th, td {
     text-align: right;
     padding: $padding-base/5;

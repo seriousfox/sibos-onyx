@@ -1,0 +1,38 @@
+.modal-overlay {
+  @include position(absolute, 0px 0px 0px 0px);
+  .double-border-wrapper {
+    @include span-columns(6);
+    @include shift(3);
+    position: absolute;
+    @extend %vertical-align;
+  }
+}
+.top-header-block {
+  background-color: $ice-panel;
+  height: 50px;
+  position: relative;
+  h2 {
+    position: absolute;
+    @extend %vertical-align;
+    padding: 0px;
+    padding-left: $padding-base;
+    font-weight: $semibold;
+  }
+}
+.modal-window {
+  background-color: $transparent-panel;
+  padding: $padding-base;
+  box-shadow: $teal-glow;
+  border: 1px dotted $border-ice-blue;
+  @extend %clearfix;
+}
+
+.payment-recs {
+  .payment-label {
+    @include span-columns(2);
+  }
+  .payment-rest {
+    @include span-columns(9);
+    @include omega;
+  }
+}

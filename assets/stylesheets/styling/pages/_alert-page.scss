@@ -73,6 +73,7 @@
     @include transition(opacity 0.1s ease-in-out);
     &.show {
       opacity: 1;
+      height: 100%;
       display: block;
     }
   }
@@ -113,12 +114,63 @@
     }
   }
 }
+%account-block {
+  @include span-columns(6);
+  padding: $padding-base/2;
+  margin-bottom: $padding-base/2;
+}
+
+@include keyframes(movecad) {
+  0% {
+    @include transform(translate(0%,0%));
+  }
+  60% {
+    @include transform(translate(-120%,113%));
+    box-shadow: $no-glow;
+    background-color: $orange-panel;
+  }
+  80% {
+    box-shadow: $teal-glow;
+    background-color: $teal-panel;
+  }
+  100% {
+    @include transform(translate(-120%,113%));
+    background-color: $teal-panel;
+  }
+}
 
 .transfer-animation {
   @extend %clearing-block;
   .usd-structure {
-    @include span-columns(6);
     border: 1px dotted $border-transparent;
-    padding: $padding-base/2;
+    @extend %account-block;
+  }
+  .account-block-top {
+    background-color: $clear-panel;
+    @extend %account-block;
+    @include shift(3);
+  }
+  .account-block {
+    @extend %account-block;
+    background-color: $teal-panel;
+  }
+  .transparent-block {
+    @extend %account-block;
+    border: 1px dotted $border-ice-blue;
+  }
+  .cad-own {
+    @extend %account-block;
+    position: relative;
+    .red-block {
+      @extend %account-block;
+      background-color: $orange-panel;
+      @include animation(movecad 1.8s ease-in);
+      @include animation-fill-mode(forwards);
+    }
+    .transparent-red-block {
+      @extend %account-block;
+      position: absolute;
+      border: 1px dotted $border-orange;
+    }
   }
 }

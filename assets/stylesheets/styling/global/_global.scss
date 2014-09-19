@@ -6,6 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   height: 100%;
 }
+.blur-wrapper {
+  @include filter(blur(2px));
+}
 html {
   font-size: 16px;
   @include media($big-screen) {
@@ -108,4 +111,9 @@ a {
 .half {
   @include span-columns(6);
   display: inline-block;
+}
+
+.double-border-wrapper {
+  border: 3px double $border-teal;
+  padding: $padding-base/4;
 }
