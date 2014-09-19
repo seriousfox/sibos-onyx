@@ -52,6 +52,10 @@ class App < Sinatra::Base
     erb :payment_research, :layout => !request.pjax?
   end
 
+  get "/payment_transfer" do
+    erb :payment_transfer, :layout => !request.pjax?
+  end
+
   get "/car-sales" do
     erb :car_sales
   end

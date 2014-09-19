@@ -43,4 +43,7 @@ $ ->
 
   $(document).on 'click', '.payment-research-search', (e) ->
     e.preventDefault()
-    $('.details').addClass('animated')
+    $('.details').removeClass('animated').addClass('animated')
+
+  $(document).on 'click', '.details tr', (e) ->
+    $('.reason').removeClass('animated').addClass('animated')
