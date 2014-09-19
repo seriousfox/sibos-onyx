@@ -1,0 +1,18 @@
+.app-bar {
+  @include span-columns(1);
+  position: absolute;
+  right: 0px;
+  padding: $padding-base/2;
+  a {
+    margin-bottom: $padding-base/4;
+    display: block;
+    opacity: 0.4;
+    &:hover {
+      opacity: 0.8;
+      @include transform(scale(1.2,1.2));
+    }
+    img {
+      max-height: 6.3%;
+    }
+  }
+}
