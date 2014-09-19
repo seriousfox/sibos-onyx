@@ -1,11 +1,51 @@
+
+@include keyframes(modal-insert) {
+  0% {
+    @include transform(scale(0,0) rotateX(-180deg));
+  }
+
+  100% {
+    @include transform(scale(1,1) rotateX(0deg));
+  }
+}
+
+@include keyframes(scale-and-fade) {
+  0% {
+    @include transform(scale(1,1));
+    @include filter(blur(0px));
+    opacity: 1;
+  }
+  90% {
+    @include transform(scale(0.8,0.8));
+    @include filter(blur(4px));
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+.modal-insert {
+  @include animation(modal-insert 0.4s ease);
+  @include animation-fill-mode(forwards);
+}
+
+.scale-fade {
+  @include animation(scale-and-fade 0.3s ease);
+  @include animation-fill-mode(forwards);
+}
+
 .modal-overlay {
   @include position(absolute, 0px 0px 0px 0px);
+  @include transform(scale(0,0) rotateX(-103deg));
   .double-border-wrapper {
     @include span-columns(6);
     @include shift(3);
     position: absolute;
     @extend %vertical-align;
   }
+
 }
 .top-header-block {
   background-color: $ice-panel;
@@ -23,8 +63,10 @@
   background-color: $transparent-panel;
   padding: $padding-base;
   box-shadow: $teal-glow;
-  border: 1px dotted $border-ice-blue;
   @extend %clearfix;
+  h3 {
+    padding-bottom: $padding-base;
+  }
 }
 
 .payment-recs {
@@ -33,6 +75,25 @@
   }
   .payment-rest {
     @include span-columns(9);
-    @include omega;
+    @include omega();
+    input, textarea {
+      width: 100%;
+    }
+    padding-bottom: $padding-base/2;
+  }
+  .select-currency {
+    input {
+      @include span-columns(8);
+    }
+    .styled-select {
+      width: 28.30769%;
+      @include omega();
+    }
+  }
+  .button-container {
+    @include span-columns(11);
+  }
+  .button {
+    float: right;
   }
 }

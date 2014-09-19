@@ -25,21 +25,50 @@
           </h4>
         </div>
         <div class="payment-label">
-          <h4><b>Date:</b></h4>
+          <label>Date:</label>
         </div>
         <div class="payment-rest">
           <input type="date">
         </div>
         <div class="payment-label">
-          <h4><b>Amount:</b></h4>
+          <label>Amount:</label>
         </div>
-        <div class="payment-rest">
+        <div class="payment-rest select-currency">
           <input type="number">
           <div class="styled-select">
             <select name="" id="">
-
+              <option value="">USD</option>
+              <option value="">GBP</option>
+              <option value="">CAD</option>
+              <option value="">AED</option>
+              <option value="">EUR</option>
             </select>
           </div>
+        </div>
+        <div class="payment-label">
+          <label>Urgency:</label>
+        </div>
+        <div class="payment-rest">
+          <a href="" class="fake-radio-button active">
+            Same Day
+          </a>
+          <a href="" class="fake-radio-button">
+            1 Day
+          </a>
+          <a href="" class="fake-radio-button">
+            2 Day
+          </a>
+        </div>
+        <div class="payment-label">
+          <label>Remarks:</label>
+        </div>
+        <div class="payment-rest">
+          <textarea name="" id="" cols="30" rows="20"></textarea>
+        </div>
+        <div class="button-container">
+          <a href="" class="button" id="submit-payment">
+            Submit Payment
+          </a>
         </div>
       </form>
     </div>

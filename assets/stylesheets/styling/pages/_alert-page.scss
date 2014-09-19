@@ -164,7 +164,7 @@
     .red-block {
       @extend %account-block;
       background-color: $orange-panel;
-      @include animation(movecad 1.8s ease-in);
+      @include animation(movecad 1s ease-in);
       @include animation-fill-mode(forwards);
     }
     .transparent-red-block {

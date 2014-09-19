@@ -64,10 +64,6 @@
     color-stop(0.50,  rgba(0,0,0,0)),
     color-stop(0.75,  rgba(0,0,0,0)),
     color-stop(1.00,  rgba(0,0,0,0)));
-  .double-border-wrapper {
-    border: 3px double $border-teal;
-    padding: $padding-base/4;
-  }
   .login-splash {
     @extend %clearfix;
     border: 1px dotted $border-ice-blue;

@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   height: 100%;
 }
-.blur-wrapper {
+.blur {
   @include filter(blur(2px));
 }
 html {
