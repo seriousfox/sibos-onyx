@@ -47,23 +47,44 @@
     }
     form {
       padding:0 20px;
+      .styled-select {
+        width:70%;
+      }
+      .actions {
+        text-align: right;
+        width:70%;
+      }
     }
+
   }
   .results {
     margin-top: 20px;
     @include span-columns(6);
     .details {
+      opacity: 0;
+      @include transform(scale(0,0));
+      @include filter(blur(4px));
       margin-right: 20px;
       tr {
         cursor: pointer;
       }
+      &.animated {
+        @include animation(scale-and-fade-in 0.4s ease);
+        @include animation-fill-mode(forwards);
+      }
     }
     .reason {
+      @include transform(scale(0,0));
+      @include filter(blur(4px));
       margin-top: 20px;
       margin-right: 20px;
       background:$black-panel;
       border-radius:$border-base-radius;
       padding:10px;
+      &.animated {
+        @include animation(scale-and-fade-in 0.4s ease);
+        @include animation-fill-mode(forwards);
+      }
     }
 
   }
@@ -77,5 +98,18 @@
   padding:10px;
   h2 {
     padding:0;
+  }
+}
+
+
+@include keyframes(scale-and-fade-in) {
+  0% {
+    @include transform(scale(0.1,0.1));
+    @include filter(blur(4px));
+  }
+  100% {
+    @include transform(scale(1,1));
+    @include filter(blur(0px));
+    opacity: 1;
   }
 }

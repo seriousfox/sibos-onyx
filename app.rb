@@ -22,7 +22,7 @@ class App < Sinatra::Base
 
   def initialize
     super
-
+    @user = nil
   end
 
   # Define urls like this, erb :file links to /views/file.erb
@@ -31,15 +31,13 @@ class App < Sinatra::Base
   end
 
   get "/location/:user" do
+    @user = params[:user]
     erb :location, :layout => !request.pjax?
   end
 
-  get "/face" do
+  get "/face/:user" do
+    @user = params[:user]
     erb :face, :layout => !request.pjax?
-  end
-
-  get "/audio" do
-    erb :audio, :layout => !request.pjax?
   end
 
   get "/susan" do

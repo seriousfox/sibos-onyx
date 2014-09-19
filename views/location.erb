@@ -1,6 +1,6 @@
 <div class="location-container">
   <div class="user-photo-container" href="/cfo-login">
-    <img src="<%= image_path 'susan.jpg' %>" alt="">
+    <img src="<%= image_path "#{@user}.jpg" %>" alt="">
   </div>
   <h1>Acquiring Location</h1>
   <div class="progress-bar">
@@ -25,7 +25,7 @@
       flash.$el.one('completed',function(){
         // TODO: Timeout shouldn't be needed completed should have a wait instead
         setTimeout(function(){
-          $.pjax({url: '/face', container: '.application'})  
+          $.pjax({url: '/face/<%= @user %>', container: '.application'})  
           flash.hide()
         },1500)
         

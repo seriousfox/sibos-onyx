@@ -175,7 +175,10 @@ textarea {
     margin-right: $padding-base/4;
   }
 }
-
+.actions {
+  @include clearfix;
+  margin-top: 20px;
+}
 .button {
   padding: $padding-base/2;
   border-radius: $border-base-radius;

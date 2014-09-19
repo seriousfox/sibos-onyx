@@ -1,7 +1,7 @@
 <div class="face_container">
   <div class="profile">
     <div class="user-photo-container" href="/cfo-login">
-      <img src="<%= image_path 'susan.jpg' %>" alt="">
+      <img src="<%= image_path "#{@user}.jpg" %>" alt="">
     </div>
   </div>
   <div class="face_feed">
@@ -44,7 +44,7 @@
             var flash = new App.Flash('.flash').text('<h1>Face Matched</h1>')
             flash.$el.one('completed',function(){
               setTimeout(function(){
-                $.pjax({url: '/audio', container: '.application'})  
+                $.pjax({url: '/<%= @user %>', container: '.application'})  
                 flash.hide()
               },1500)
             })
