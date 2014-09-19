@@ -79,6 +79,7 @@
   padding: $padding-base/2;
   background-color: rgba($teal, 0);
   cursor: pointer;
+  width: 250px;
   @extend %transition-base;
   .user-account {
     width: 50px;
@@ -91,4 +92,20 @@
     border: 1px solid rgba($ice-blue, 0.3);
     background-color: rgba($teal, 0.2);
   }
+  &.ontop {
+    border: 1px solid rgba($ice-blue, 0.3);
+    background-color: rgba($teal, 0.2);
+    bottom: 72px;
+
+    &:hover {
+      box-shadow: $teal-glow;
+    }
+  }
+  &.active {
+    border: 1px solid rgba($ice-blue, 0.3);
+    background-color: rgba($teal, 0.2);
+  }
+}
+#non-active-user {
+  display: none;
 }

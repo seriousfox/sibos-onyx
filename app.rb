@@ -40,6 +40,11 @@ class App < Sinatra::Base
     erb :face, :layout => !request.pjax?
   end
 
+  get "/voice/:user" do
+    @user = params[:user]
+    erb :audio, :layout => !request.pjax?
+  end
+
   get "/susan" do
     erb :cfo_dash, :layout => !request.pjax?
   end

@@ -1,4 +1,4 @@
-<div class="logged-in">
+<a href="/robert" class="logged-in" id="active-user" data-ignore="true">
   <div class="user-account">
     <div class="small-user-container">
       <img src="<%= image_path 'robert.jpg' %>" alt="">
@@ -7,4 +7,14 @@
   <div class="user-id">
     <h4>Robert Calligan</h4>
   </div>
-</div>
+</a>
+<a href="/susan" class="logged-in ontop" id="non-active-user" data-ignore="true">
+  <div class="user-account">
+    <div class="small-user-container">
+      <img src="<%= image_path 'susan.jpg' %>" alt="">
+    </div>
+  </div>
+  <div class="user-id">
+    <h4>Susan Nicholson</h4>
+  </div>
+</a>

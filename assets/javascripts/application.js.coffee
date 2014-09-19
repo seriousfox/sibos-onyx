@@ -53,6 +53,11 @@ $ ->
   $(document).on 'click', '.details tr', (e) ->
     $('.reason').removeClass('animated').addClass('animated')
 
+  $(document).on 'click', '#active-user', (e) ->
+    e.preventDefault()
+    $('#non-active-user').fadeToggle()
+    $('#active-user').toggleClass('active')
+
   $(document).on 'click', '#submit-transfer', (e) ->
     e.preventDefault()
     flash = new App.Flash('.flash').text('<h1>Payment Submitted</h1>')

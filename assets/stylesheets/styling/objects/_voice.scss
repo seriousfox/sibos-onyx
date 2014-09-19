@@ -1,0 +1,39 @@
+.voice-container {
+  @include span-columns(6);
+  @include shift(3);
+  position: absolute;
+  top: 30%;
+}
+
+.audio_container {
+  position: relative;
+  height: 100%;
+}
+
+
+@include keyframes(wipe) {
+  0% {
+    -webkit-mask-position: 275% 0%;
+  }
+  100% {
+    -webkit-mask-position: 185% 0%;
+  }
+}
+
+
+.show-voice {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  @include animation(wipe 4s ease);
+  @include animation-fill-mode(forwards);
+  -webkit-mask-size: 225% 100%;
+  -webkit-mask-position: 275% 0%;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top,
+    color-stop(0.00,  rgba(0,0,0,1)),
+    color-stop(0.35,  rgba(0,0,0,1)),
+    color-stop(0.50,  rgba(0,0,0,0)),
+    color-stop(0.75,  rgba(0,0,0,0)),
+    color-stop(1.00,  rgba(0,0,0,0)));
+}

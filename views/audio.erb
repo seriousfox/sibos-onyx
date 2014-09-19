@@ -1,13 +1,21 @@
 <div class="audio_container">
   <div class="profile">
     <div class="user-photo-container" href="/cfo-login">
-      <img src="<%= image_path 'susan.jpg' %>" alt="">
+      <img src="<%= image_path "#{@user}.jpg" %>" alt="">
     </div>
   </div>
   <div class="audio_feed">
-    <h1>Initialising Voice Recognition Sequence</h1>
+    <h1>Say your Name to Initialise Voice Recognition Sequence</h1>
     <div class="progress-bar">
       <span class="meter" style="width:0%;"></span>
+    </div>
+  </div>
+  <div class="voice-container">
+    <div class="transparent-voice">
+      <img src="<%= image_path 'background/voice.svg' %>" alt="">
+    </div>
+    <div class="show-voice">
+      <img src="<%= image_path 'background/voice-full.svg' %>" alt="">
     </div>
   </div>
   <div class="message"></div>
@@ -16,3 +24,20 @@
   <img class="map" src="<%= image_path 'worldmap.svg' %>">
   <h3>Location: Boston, USA</h3>
 </div>
+
+<script type="text/javascript">
+    var options = {delay: 4000, animationTime: 1500 };
+    new App.progress('.progress-bar',options).start(function(){
+      // Show a flash message
+      var flash = new App.Flash('.flash').text('<h1>VOICE Match Found</h1>')
+      flash.$el.one('completed',function(){
+        // TODO: Timeout shouldn't be needed completed should have a wait instead
+        setTimeout(function(){
+          $.pjax({url: '/<%= @user %>', container: '.application'})
+          flash.hide()
+        },1500)
+
+      })
+      flash.show();
+    })
+</script>
