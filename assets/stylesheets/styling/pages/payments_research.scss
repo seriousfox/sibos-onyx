@@ -49,6 +49,7 @@
       padding:0 20px;
       .styled-select {
         width:70%;
+        margin-bottom: $padding-base/2;
       }
       .actions {
         text-align: right;
@@ -78,7 +79,7 @@
       @include filter(blur(4px));
       margin-top: 20px;
       margin-right: 20px;
-      background:$black-panel;
+      background:$transparent-panel;
       border-radius:$border-base-radius;
       padding:10px;
       &.animated {

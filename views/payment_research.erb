@@ -42,11 +42,23 @@
       <form action="">
 
         <input type="date" placeholder="Date">
+
         <input type="text" placeholder="Account No.">
+
         <input type="text" placeholder="Amount">
-        <input type="text" placeholder="Currency">
+
+        <div class="styled-select">
+          <select name="" id="country">
+            <option>USD</option>
+            <option>GBP</option>
+            <option>CAD</option>
+            <option selected>AED</option>
+            <option value="">EUR</option>
+          </select>
+        </div>
+
         <input type="text" placeholder="Beneficiary">
-        <input type="text" placeholder="Country">
+
         <div class="styled-select">
           <select name="" id="country">
             <option>America</option>
@@ -56,7 +68,7 @@
           </select>
         </div>
         <div class="actions">
-          <a href="#" class="button payment-research-search" data-ignore="true">Search</a>  
+          <a href="#" class="button payment-research-search" data-ignore="true">Search</a>
         </div>
       </form>
     </div>
