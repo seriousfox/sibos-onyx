@@ -36,8 +36,8 @@
     </li>
   </ul>
 
-  <div class="row">
-    <ul id="from">
+  <div class="row payment-cards">
+    <ul id="from" class="connected">
       <li>
         <h2>Acc No. 2016472</h2>
         <h2>Sinbad Industries</h2>
@@ -52,12 +52,19 @@
       </li>
       <li>
         <h2>Acc No. 504147</h2>
+        <h2>AED Operating</h2>
         <h2>Vendor Calligan</h2>
       </li>
     </ul>
-    <ul id="to"></ul>
+    <ul id="to" class="connected"></ul>
   </div>
 
 </div>
+
+<script type="text/javascript"> 
+  $( "#from, #to" ).sortable({
+      connectWith: ".connectedSortable"
+  }).disableSelection();
+</script>
 <%= partial(:'partials/dashboards_bg') %>
 <%= partial(:'partials/robert') %>

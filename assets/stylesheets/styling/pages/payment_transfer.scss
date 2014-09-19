@@ -1,0 +1,38 @@
+#from, #to {
+  @include span-columns(6);
+  @include outer-container;
+  li {
+    @include span-columns(6);
+    @include omega(2n);
+    height:150px;
+    background:$transparent-panel;
+    border: 1px solid $border-teal;
+    margin-bottom: 10px;
+    padding:20px;
+    &.ui-sortable-helper {
+      @include animation(pulse-shadow 2s ease-in-out infinite);
+      @include animation(grow .2s ease forwards);
+    }
+  }
+  
+}
+#from {
+  padding-right: 10px;
+  border-right: 1px solid $teal;
+}
+.payment-cards {
+  margin:40px;
+}
+
+
+@include keyframes(pulse-shadow) {
+  0% {box-shadow:0px 0px 1px 0px rgba(44, 254, 251, 0.86)}
+  50% {box-shadow:0px 0px 18px 0px rgba(44, 254, 251, 0.86)}
+  100% {box-shadow:0px 0px 5px 0px rgba(44, 254, 251, 0.86)}
+}
+
+@include keyframes(grow) {
+  100% {
+    @include transform(scale(1.2));
+  }
+}
