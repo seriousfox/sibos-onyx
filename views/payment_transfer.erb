@@ -36,7 +36,7 @@
     </li>
   </ul>
 
-  <div class="row payment-cards">
+  <div class="payment-cards">
     <ul id="from" class="connected">
       <li>
         <h2>Acc No. 2016472</h2>
@@ -56,15 +56,46 @@
         <h2>Vendor Calligan</h2>
       </li>
     </ul>
-    <ul id="to" class="connected"></ul>
+    <ul id="to" class="connected">
+      <li>
+        <h2>Acc No. 2016472</h2>
+        <h2>Sinbad Industries</h2>
+      </li>
+      <li>
+        <h2>Acc No. 6305478</h2>
+        <h2>Vendor 12</h2>
+      </li>
+      <li>
+        <h2>Acc No. 9504702</h2>
+        <h2>Vendor XX</h2>
+      </li>
+      <li>
+        <h2>Acc No. 504147</h2>
+        <h2>AED Operating</h2>
+        <h2>Vendor Calligan</h2>
+      </li>
+    </ul>
   </div>
 
 </div>
 
 <script type="text/javascript"> 
-  $( "#from, #to" ).sortable({
-      connectWith: ".connectedSortable"
-  }).disableSelection();
+  $("#from li").draggable({
+      appendTo: "body",
+      cursor: "move",
+      // helper: 'clone',
+      revert: "invalid"
+  });
+
+
+  $("#to li").droppable({
+    accept: "#from li",
+    activeClass: "ui-state-default",
+    hoverClass: "ui-state-hover",
+    drop: function(event, ui) {        
+      $(ui.helper).fadeOut()
+    }
+  });
 </script>
 <%= partial(:'partials/dashboards_bg') %>
 <%= partial(:'partials/robert') %>
