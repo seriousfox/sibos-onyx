@@ -31,7 +31,7 @@
       display: block;
       padding: $padding-base/2;
       margin-bottom: $padding-base/2;
-      @include transition(all 0.2s ease-in);
+      @include transition(all 0.1s ease-in);
       &:before {
         counter-increment: section;
         content: counter(section)'. ';
@@ -41,8 +41,7 @@
         font-weight: $bold;
       }
       &:hover {
-        background-color: rgba($teal, 0.6);
-        @include transform(scale(1.03,1.03));
+        @include background(rgba($teal, 0.6), linear-gradient(top, rgba(26,107,104,0.63) 0%,rgba(26,107,104,0.62) 1%,rgba(83,210,224,0.41) 17%,rgba(82,207,222,0) 48%,rgba(81,203,219,0.38) 81%,rgba(81,203,219,0.48) 90%,rgba(26,107,104,0.6) 100%));
       }
     }
     .active {
