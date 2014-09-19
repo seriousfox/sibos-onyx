@@ -43,15 +43,15 @@ class App < Sinatra::Base
   end
 
   get "/susan" do
-    erb :cfo_dash
+    erb :cfo_dash, :layout => !request.pjax?
   end
 
   get "/robert" do
-    erb :acct_man_dash
+    erb :acct_man_dash, :layout => !request.pjax?
   end
 
   get "/payment_research" do
-    erb :payment_research
+    erb :payment_research, :layout => !request.pjax?
   end
 
   get "/car-sales" do
