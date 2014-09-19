@@ -24,8 +24,13 @@
   margin-bottom: $padding-base*3;
 }
 .im-block {
+  background-image: image-url('background/voice.svg');
   &:hover{
     background-color: rgba($ice-blue, 0.4);
     @include transform(scale(1.03,1.03));
+    box-shadow: $small-teal-glow;
+    .im-action {
+      box-shadow: $small-teal-glow;
+    }
   }
 }

@@ -9,13 +9,14 @@
   }
   li {
     @extend %clearfix;
-    @extend %transition-base;
+    @extend %transition-fast;
     background: $transparent-panel;
     padding: $padding-base;
     border: 1px solid $border-ice-blue;
     &:hover {
       background-color: $teal-panel;
       @include transform(scale(1.03,1.03));
+      box-shadow: $small-teal-glow;
     }
     &:last-child {
       margin-bottom: 0px;
@@ -109,6 +110,7 @@ li {
   &.red:hover {
     background-color: rgba($red, 0.6);
     @include transform(scale(1.03,1.03));
+    box-shadow: $small-orange-glow;
   }
   &.im-block {
     background-color: $ice-panel;

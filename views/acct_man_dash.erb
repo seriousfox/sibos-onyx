@@ -5,12 +5,12 @@
     <div class="alerts">
       <div class="alert-notify">
         <h3 class="red-text">7 Alerts</h3>
-        <a href="" class="view-more">
+        <a href="" class="view-more" data-ignore>
           View More
         </a>
       </div>
       <ul class="alert-lists">
-        <a href="">
+        <a href="" data-ignore>
           <li class="red">
             <h3>
               2 Payments awaiting approval
@@ -18,7 +18,7 @@
           </li>
         </a>
 
-        <a href="">
+        <a href="" data-ignore>
           <li class="red">
             <h3>
               3 invoices PMT due
@@ -96,4 +96,5 @@
   </div>
   <%= partial(:'partials/dashboards_bg') %>
   <%= partial(:'partials/robert') %>
+  <%= partial(:'partials/app_bar') %>
 </div>

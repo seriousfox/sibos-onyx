@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- change itemtype https://developers.google.com/+/web/snippet/ -->
-<html lang="en" itemscope itemtype="[google-item-type]">
+<html lang="en" itemscope itemtype="http://schema.org/Product">
 <head>
   <meta charset="utf-8">
   <title>The ONYX Project</title>
@@ -8,10 +8,6 @@
   <meta name="author" content="">
 
   <%= partial(:'partials/social/social_meta') %>
-  <!--
-  <script type="text/javascript" src="//use.typekit.net/afm5tip.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-   -->
   <%= stylesheet_tag 'application' %>
   <%= javascript_tag 'libs' %>
   <%= javascript_tag 'application' %>
@@ -25,7 +21,8 @@
   <div class="background">
     <div class="left-animated-dots"></div>
     <div class="right-animated-dots"></div>
-    <div class="tech-lines"></div>
+    <div class="line-work">
+    </div>
   </div>
 
 </body>

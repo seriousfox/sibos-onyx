@@ -10,16 +10,16 @@
     <canvas id="overlay" width="640" height="480"></canvas>
     <canvas id="debug" width="640" height="480" style="display:none"></canvas>
     <span class="scan-line-vertical"></span>
-    <span class="scan-line-horizontal"></span>  
-  </div>  
+    <span class="scan-line-horizontal"></span>
+  </div>
   <div class="messaging">
     <p id='gUMMessage'></p>
     <h2>Status : <span id='headtrackerMessage'></span></h2>
   </div>
 </div>
 <div class="map-background">
-  <img class="map" src="<%= image_path 'worldmap.svg' %>">  
-  <h3>Location: London, UK</h3>
+  <img class="map" src="<%= image_path 'worldmap.svg' %>">
+  <h3>Location: Boston, USA</h3>
 </div>
 
 <script type="text/javascript">
@@ -31,8 +31,8 @@
         face.$el.off('status')
         setTimeout(
           face.showProbabilityCanvas()
-        ,2000)  
-        
+        ,2000)
+
         // Wait until after the probabilty map has been shown, then render the lines
         setTimeout(function(){
           $('.scan-line-vertical').animate({

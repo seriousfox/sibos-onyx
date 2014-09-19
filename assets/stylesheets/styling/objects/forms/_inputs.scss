@@ -182,14 +182,15 @@ textarea {
 .button {
   padding: $padding-base/2;
   border-radius: $border-base-radius;
-  border: 1px solid $green;
+  border: 1px solid $teal;
   display: inline-block;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: $semibold;
-  background-color: rgba($green,0);
+  background-color: rgba($teal,0.3);
   @extend %transition-fast;
   &:hover {
-    background-color: $green;
+    background-color: rgba($teal, 0.7);
+    box-shadow: $small-teal-glow;
   }
 }

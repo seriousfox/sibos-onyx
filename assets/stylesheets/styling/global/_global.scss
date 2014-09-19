@@ -1,10 +1,14 @@
 body {
-  @include background-image( linear-gradient(to top, $base-gradient, #000000));
+  background: image-url('bg.png');
+  background-size: cover;
   font-size: 16px;
   color: $ice-blue-softer;
   font-family: $sans;
   -webkit-font-smoothing: antialiased;
   height: 100%;
+}
+.blur-wrapper {
+  @extend %transition-base;
 }
 .blur {
   @include filter(blur(2px));
@@ -51,6 +55,7 @@ a {
   background: image-url('dots1.png');
   background-repeat: repeat-x;
   background-position: 0% center;
+  opacity: 0.2;
 
 }
 
@@ -60,22 +65,9 @@ a {
   background: image-url('dots2.png');
   background-repeat: repeat-x;
   background-position: 100% center;
+  opacity: 0.2;
 }
 
-// @include keyframes(lines-bounce) {
-//   from { background-size: 150% 150%;}
-//   to { background-size: 100% 100%;}
-// }
-
-.tech-lines {
-  @include position(fixed, 0px 0px 0px 0px);
-  background: image-url('lines.svg') no-repeat;
-  background-size: 150% 150%;
-  background-position: 0%, 50%;
-  /* @include animation(lines-bounce 75s ease);
-  @include animation-iteration-count(infinite);
-  @include animation-direction(alternate-reverse) */
-}
 .top-nav {
   padding-top: $padding-base/2;
   padding-bottom: $padding-base/4;
@@ -116,4 +108,12 @@ a {
 .double-border-wrapper {
   border: 3px double $border-teal;
   padding: $padding-base/4;
+}
+
+.line-work {
+  @include position(absolute, 0px 0px 0px 0px);
+  background: image-url('background/bg-lines.svg');
+  background-size: 100%;
+  background-position: top left;
+  opacity: 0.3;
 }
