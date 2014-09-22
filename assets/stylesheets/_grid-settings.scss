@@ -39,3 +39,8 @@ $ipad: new-breakpoint(max-width 991px 12);
 $tablet: new-breakpoint(max-width 768px 9);
 $phone: new-breakpoint(max-width 580px 6);
 $iphone: new-breakpoint(max-width 340px 3);
+
+//vertical
+
+$medium-height: 'max-height' 715px;
+$small-height: 'max-height' 635px;
