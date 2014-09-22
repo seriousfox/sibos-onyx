@@ -1,6 +1,5 @@
 //= require config
 //= require_tree ../javascripts/components
-
 $ ->
   allrecs = $('.rec-0, .rec-1, .rec-2')
   allrecid = $('#rec-0, #rec-1, #rec-2, #rec-3, #rec-4')

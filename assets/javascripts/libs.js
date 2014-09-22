@@ -5,3 +5,4 @@
 //= require libs/underscore-min
 //= require libs/jquery.pjax
 //= require libs/headtrackr
+//= require libs/preloadr

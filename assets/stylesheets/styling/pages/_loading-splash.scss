@@ -19,26 +19,23 @@
   }
 }
 .onyx-welcome-splash {
+  opacity: 0;
   @include col(6, 3, $ipad, 8, 2);
   position: relative;
   top: 50%;
   @include transform(translateY(-50%) scale(1,1));
-  @include animation(scale-and-move-up 1s cubic-bezier(0.550, 0.055, 0.675, 0.190));
-  @include animation-delay(2.1s);
-  @include animation-fill-mode(forwards);
-  .onyx-splash-logo {
-    position: relative;
-    @include animation(wipe 2s ease);
-    @include animation-fill-mode(forwards);
-    -webkit-mask-size: 225% 100%;
-    -webkit-mask-position: 275% 0%;
-    -webkit-mask-image: -webkit-gradient(linear, left top, right top,
-      color-stop(0.00,  rgba(0,0,0,1)),
-      color-stop(0.35,  rgba(0,0,0,1)),
-      color-stop(0.50,  rgba(0,0,0,0)),
-      color-stop(0.75,  rgba(0,0,0,0)),
-      color-stop(1.00,  rgba(0,0,0,0)));
-  }
+}
+
+.onyx-splash-logo {
+  position: relative;
+  -webkit-mask-size: 225% 100%;
+  -webkit-mask-position: 275% 0%;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top,
+    color-stop(0.00,  rgba(0,0,0,1)),
+    color-stop(0.35,  rgba(0,0,0,1)),
+    color-stop(0.50,  rgba(0,0,0,0)),
+    color-stop(0.75,  rgba(0,0,0,0)),
+    color-stop(1.00,  rgba(0,0,0,0)));
 }
 
 @include keyframes(top-wipe) {
@@ -51,10 +48,8 @@
 }
 
 .login-splash-wrapper {
+  opacity: 0;
   @include col(6, 3, $ipad, 8, 2);
-  @include animation(top-wipe 1s ease);
-  @include animation-fill-mode(forwards);
-  @include animation-delay(2.8s);
   position: relative;
   -webkit-mask-size: 100% 200%;
   -webkit-mask-position: 0% 100%;
@@ -77,5 +72,26 @@
       display: table;
       margin: 0 auto;
     }
+  }
+}
+
+
+// Once files have been loaded
+.loaded {
+  .onyx-splash-logo {
+    @include animation(wipe 2s ease);
+    @include animation-fill-mode(forwards);
+  } 
+  .onyx-welcome-splash {
+    opacity: 1;
+    @include animation(scale-and-move-up 1s cubic-bezier(0.550, 0.055, 0.675, 0.190));
+    @include animation-delay(2.1s);
+    @include animation-fill-mode(forwards);
+  }
+  .login-splash-wrapper {
+    opacity: 1;
+    @include animation(top-wipe 1s ease);
+    @include animation-fill-mode(forwards);
+    @include animation-delay(2.8s);
   }
 }

@@ -1,3 +1,18 @@
+<script type="text/javascript">
+  preloadr(['<%= image_path 'background/voice.svg' %>',
+            '<%= image_path 'background/voice-full.svg' %>',
+            '<%= image_path 'background/bg-lines.svg' %>',
+            '<%= image_path 'background/side-bar.svg' %>',
+            '<%= image_path 'onyx.svg' %>',
+            '<%= image_path 'worldmap.svg' %>',
+            '<%= image_path 'bg.png' %>',
+            '<%= image_path 'xcel-icon.svg' %>'
+            ],null,
+            function(images){
+              console.log(images)
+              $('.application').addClass('loaded')
+            });
+</script>
 <div class="onyx-welcome-splash">
   <h1>Initialising the ONYX Project</h1>
   <div class="onyx-splash-logo">
