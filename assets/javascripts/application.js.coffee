@@ -72,7 +72,7 @@ $ ->
       setTimeout( ->
         $.pjax({url: '/robert/transfer', container: '.application'})
         flash.hide()
-      ,500)
+      ,1750)
     flash.show();
 
   $(document).on 'click', '#hide-message', (e) ->
