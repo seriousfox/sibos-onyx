@@ -145,3 +145,21 @@ table {
     background-color: rgba(0,0,0,0.1);
   }
 }
+
+.line-items {
+  .nested-header {
+    text-align: left;
+    font-size: rem(16px);
+    padding-left: 5px;
+    font-weight: $bold;
+  }
+  .child-nested-header {
+    font-size: rem(12px);
+    padding-left: 20px;
+    text-align: left;
+  }
+  .lowest-nested-header {
+    text-align: left;
+    padding-left: 30px;
+  }
+}
