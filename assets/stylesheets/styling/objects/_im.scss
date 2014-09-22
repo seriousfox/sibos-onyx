@@ -44,6 +44,9 @@
   padding: $padding-base/4 $padding-base $padding-base/4 $padding-base;
   background-color: $transparent-panel;
   font-size: rem(12px);
-
-
+  &:hover {
+    cursor: pointer;
+    background-color: $teal-panel;
+    box-shadow: $small-teal-glow;
+  }
 }
