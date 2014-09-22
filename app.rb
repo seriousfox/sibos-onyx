@@ -1,5 +1,3 @@
-Bundler.require
-
 require 'sinatra/asset_pipeline'
 require 'sinatra/partial'
 
