@@ -75,6 +75,10 @@ $ ->
       ,500)
     flash.show();
 
+  $(document).on 'click', '#hide-message', (e) ->
+    e.preventDefault()
+    $('.reply-block').addClass('scale-fade')
+
   $(document).on 'click', '#submit-transfer', (e) ->
     e.preventDefault()
     flash = new App.Flash('.flash').text('<h1>Payment Submitted</h1>')
