@@ -146,18 +146,20 @@ $align-center-minus: - rem(30px)/2 - rem(5px);
       top: 0;
       height: rem(30px);
       width: rem(30px);
-      color: $teal;
+      color: $ice-blue-softer;
       background: transparent;
       padding-left: rem(6px);
     }
     &:hover:after {
       opacity: 0.5;
+      box-shadow: $small-teal-glow;
     }
   }
   input[type=checkbox]:checked + label:after {
     opacity: 1;
-    background: $transparent-panel;
+    background: $teal-panel;
     border-radius: $border-base-radius;
+    box-shadow: $small-teal-glow;
   }
 }
 
