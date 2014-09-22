@@ -43,8 +43,14 @@ $ ->
 
   $(document).on 'click', '#submit-payment', (e) ->
     e.preventDefault()
-    $('.modal-overlay').addClass('scale-fade')
-    $('.blur-wrapper').removeClass('blur')
+    flash = new App.Flash('.flash').text('<h1>Payment Submitted</h1>')
+    flash.$el.one 'completed', ->
+      # TODO: Timeout shouldn't be needed completed should have a wait instead
+      setTimeout( ->
+        $.pjax({url: '/susan/paid', container: '.application'})
+        flash.hide()
+      ,1500)
+    flash.show();
 
   $(document).on 'click', '.payment-research-search', (e) ->
     e.preventDefault()
@@ -67,5 +73,5 @@ $ ->
         $.pjax({url: '/robert', container: '.application'})
         flash.hide()
       ,1500)
-
     flash.show();
+    

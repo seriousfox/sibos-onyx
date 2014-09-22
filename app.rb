@@ -46,6 +46,12 @@ class App < Sinatra::Base
   end
 
   get "/susan" do
+    @payment = nil
+    erb :cfo_dash, :layout => !request.pjax?
+  end
+
+  get "/susan/:payment" do
+    @payment = params[:payment]
     erb :cfo_dash, :layout => !request.pjax?
   end
 
