@@ -65,25 +65,25 @@ $ ->
     $('#non-active-user').fadeToggle()
     $('#active-user').toggleClass('active')
 
-  $(document).on 'click', '#submit-transfer', (e) ->
-    e.preventDefault()
-    flash = new App.Flash('.flash').text('<h1>Payment Submitted</h1>')
-    flash.$el.one 'completed', ->
-      # TODO: Timeout shouldn't be needed completed should have a wait instead
-      setTimeout( ->
-        $.pjax({url: '/robert', container: '.application'})
-        flash.hide()
-        $('.blur-wrapper').removeClass('blur')
-      ,1500)
-    flash.show();
-
   $(document).on 'click', '.payment-research-reply', (e) ->
     e.preventDefault()
     flash = new App.Flash('.flash').text('<h1>Automatically Replied to Susan</h1>')
     flash.$el.one 'completed', ->
       # TODO: Timeout shouldn't be needed completed should have a wait instead
       setTimeout( ->
+        $.pjax({url: '/robert/transfer', container: '.application'})
+        flash.hide()
+      ,1500)
+    flash.show();
+
+  $(document).on 'click', '#submit-transfer', (e) ->
+    e.preventDefault()
+    flash = new App.Flash('.flash').text('<h1>Payment Submitted</h1>')
+    flash.$el.one 'completed', ->
+      # TODO: Timeout shouldn't be needed completed should have a wait instead
+      setTimeout( ->
         $.pjax({url: '/robert/completed', container: '.application'})
         flash.hide()
+        $('.blur-wrapper').removeClass('blur')
       ,1500)
     flash.show();
