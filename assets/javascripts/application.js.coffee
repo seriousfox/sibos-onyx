@@ -66,13 +66,13 @@ $ ->
 
   $(document).on 'click', '.payment-research-reply', (e) ->
     e.preventDefault()
-    flash = new App.Flash('.flash').text('<h1>Automatically Replied to Susan: "We had an early payment from client ABC"</h1>')
+    flash = new App.Flash('.flash').text('<h1>Automatically Replied to Susan</h1>')
     flash.$el.one 'completed', ->
       # TODO: Timeout shouldn't be needed completed should have a wait instead
       setTimeout( ->
         $.pjax({url: '/robert/transfer', container: '.application'})
         flash.hide()
-      ,1500)
+      ,500)
     flash.show();
 
   $(document).on 'click', '#submit-transfer', (e) ->

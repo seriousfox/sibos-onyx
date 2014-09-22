@@ -6,7 +6,8 @@
   padding: $padding-base/2;
   left: 0;
   right: 0;
-  font-size: rem(16px)
+  font-size: rem(16px);
+  box-shadow: $no-glow;
 }
 .im-photo {
   @include span-columns(1);
@@ -38,6 +39,15 @@
   &.reply-block {
     background-color: $transparent-panel;
     @include filter(grayscale(100%));
+    &:hover {
+      background-color: $transparent-panel;
+      @include transform(scale(1,1));
+      box-shadow: $no-glow;
+      border: 1px solid rgba($ice-blue, 0);
+      .im-action {
+        box-shadow: $no-glow;
+      }
+    }
   }
 }
 
