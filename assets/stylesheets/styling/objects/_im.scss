@@ -25,10 +25,12 @@
 }
 .im-block {
   background-image: image-url('background/voice.svg');
+  border: 1px solid rgba($ice-blue, 0);
   &:hover{
     background-color: rgba($ice-blue, 0.4);
     @include transform(scale(1.03,1.03));
     box-shadow: $small-teal-glow;
+    border: 1px solid rgba($ice-blue, 1);
     .im-action {
       box-shadow: $small-teal-glow;
     }
@@ -48,5 +50,6 @@
     cursor: pointer;
     background-color: $teal-panel;
     box-shadow: $small-teal-glow;
+    border: 1px solid $ice-blue;
   }
 }
