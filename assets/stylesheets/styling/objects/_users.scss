@@ -94,7 +94,7 @@
   }
   &.ontop {
     border: 1px solid rgba($ice-blue, 0.3);
-    background-color: rgba($teal, 0.2);
+    background-color: $black-panel;
     bottom: 72px;
 
     &:hover {

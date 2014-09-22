@@ -130,7 +130,7 @@
     @include transform(translate(0%,0%));
   }
   60% {
-    @include transform(translate(-120%,113%));
+    @include transform(translate(-224%,113%));
     box-shadow: $no-glow;
     background-color: $orange-panel;
   }
@@ -139,7 +139,7 @@
     background-color: $teal-panel;
   }
   100% {
-    @include transform(translate(-120%,113%));
+    @include transform(translate(-224%,113%));
     background-color: $teal-panel;
   }
 }
@@ -163,19 +163,22 @@
     @extend %account-block;
     border: 1px dotted $border-ice-blue;
   }
+  .unformatted-account-block {
+    padding: $padding-base/2;
+    margin-bottom: $padding-base/2;
+    background-color: $teal-panel;
+  }
   .cad-own {
     @extend %account-block;
     position: relative;
     .red-block {
       @extend %account-block;
+      padding: $padding-base/2;
+      margin-bottom: $padding-base/2;
       background-color: $orange-panel;
-      @include animation(movecad 1s ease-in);
+      @include animation(movecad 1.5s ease-in);
       @include animation-fill-mode(forwards);
     }
-    .transparent-red-block {
-      @extend %account-block;
-      position: absolute;
-      border: 1px dotted $border-orange;
-    }
+
   }
 }

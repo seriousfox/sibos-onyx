@@ -1,6 +1,7 @@
 body {
-  background: image-url('bg.png');
-  background-size: cover;
+  background: #010E17 image-url('bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   font-size: 16px;
   color: $ice-blue-softer;
   font-family: $sans;
@@ -15,6 +16,12 @@ body {
 }
 html {
   font-size: 16px;
+  @include breakpoint($medium-height) {
+    font-size: 14px;
+  }
+  @include breakpoint($small-height) {
+    font-size: 13px;
+  }
   @include media($big-screen) {
     font-size: 18px;
   }
@@ -116,4 +123,7 @@ a {
   background-size: 100%;
   background-position: top left;
   opacity: 0.3;
+}
+.col-5 {
+  @include span-columns(5);
 }

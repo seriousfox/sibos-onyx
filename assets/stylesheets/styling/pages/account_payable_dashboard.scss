@@ -1,6 +1,4 @@
-.payment-spikes {
-  @include span-columns(5);
-}
+
 .payment-spike-list {
   @extend %clearfix;
   margin-top: $padding-base/4;

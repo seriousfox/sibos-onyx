@@ -79,7 +79,6 @@ table {
 }
 
 .info-tables {
-  @include span-columns(6);
   .currency-table, .libor-table {
     border-collapse: collapse;
     vertical-align: middle;
