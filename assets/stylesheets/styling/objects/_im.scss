@@ -35,6 +35,10 @@
       box-shadow: $small-teal-glow;
     }
   }
+  &.reply-block {
+    background-color: $transparent-panel;
+    @include filter(grayscale(100%));
+  }
 }
 
 .reply {
