@@ -49,6 +49,7 @@ $ ->
       setTimeout( ->
         $.pjax({url: '/susan/paid', container: '.application'})
         flash.hide()
+        $('.blur-wrapper').removeClass('blur')
       ,1500)
     flash.show();
 
@@ -72,9 +73,10 @@ $ ->
       setTimeout( ->
         $.pjax({url: '/robert', container: '.application'})
         flash.hide()
+        $('.blur-wrapper').removeClass('blur')
       ,1500)
     flash.show();
-    
+
   $(document).on 'click', '.payment-research-reply', (e) ->
     e.preventDefault()
     flash = new App.Flash('.flash').text('<h1>Automatically Replied to Susan</h1>')
@@ -85,4 +87,3 @@ $ ->
         flash.hide()
       ,1500)
     flash.show();
-    
