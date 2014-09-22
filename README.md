@@ -1,37 +1,20 @@
-# Bourbon Neat Base Site Template
+# Sibos Onyx
 
-## Getting Started
-1.    $ cd into_directory
-2.    $ bundle
-3.    $ guard init livereload && guard
-4.    $ foreman start
-5.    Open chrome on 0.0.0.0:5000
-6.  Activate LiveReload (if not installed, add extension https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related for live reload)
-
-7. Search and replace all instances of [site-name] with the name of the project.
+## Development setup
+1. cd into directory
+2. bundle install
+3. foreman start
+4. open 0.0.0.0:5000
 
 
-## Custom mixins with explanations
-
-  **col($col-no, $shift-no, $media, $drop-to, $shift-to)**
-
-  Autodropping collumns to specified setup
-
-
-  **simple-col($col-no, $shift-no)**
-
-  Quicker way of defining span-collumns and shifts.
-  Especially useful for mediaquery changes where layout changes accross more than 1 breakpoint
-
-  **single-col**
-
-  Quick dropping collumns to 12,0 esp useful for mobile layouts where tablet layout has shifts or smaller collumn width
-
-  **font($family, $size, $color)**
-
-  Quick define fonts
-
-
-## Variable Style Guide
-
-  If font weight is determined by font family (if possible avoid) then define as *serif*, *serif-bold* et cetera.
+## Demo setup
+- Download the zip file and move it to your desktop and unzip it
+- Open the terminal application which is located in the Utilities folder inside of Applications
+- Copy the following line into terminal and press Enter (You will need to keep terminal open for the duration of the conference)
+```
+cd ~/Desktop/sibos-onyx && bundle install && rake assets:precompile && RACK_ENV=production bundle exec unicorn -p 5000 -c ./unicorn
+```
+- To access the website on your laptop you can go to ```http://0.0.0.0:5000```
+- To access on another machine you will need to get the IP address of the computer, you can do this by click the apple icon > System Preferences > Network > Wi-Fi and copy the IP Address you see there. 
+- Enter the number (it looks like xxx.xxx.x.xxx) plus :5000 e.g. ```http://192.168.1.120:5000``` 
+- Type this address into the iPad to access the site **note: The iPad needs to be on the same network**
