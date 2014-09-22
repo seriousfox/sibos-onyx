@@ -25,56 +25,60 @@
             </h3>
           </li>
         </a>
-        <a href="/payment_research">
-          <li class="im-block has-action">
-            <div class="im-photo">
-              <div class="small-user-container">
-                <img class="person-image" src="<%= image_path 'susan.jpg' %>" alt="">
+        <% unless @transfer %>
+          <a href="/payment_research">
+            <li class="im-block has-action">
+              <div class="im-photo">
+                <div class="small-user-container">
+                  <img class="person-image" src="<%= image_path 'susan.jpg' %>" alt="">
+                </div>
               </div>
-            </div>
-            <div class="im-content">
-              <h4>
-                <b>
-                  Message to Robert:
-                </b>
-              </h4>
-              <p>
-                Why is there excess cash in the AED operating account?
-              </p>
-            </div>
-            <div class="im-time">
-              Today 06:05
-            </div>
-            <div class="im-action">
-              RECOMMENDED ACTION: RESEARCH PAYMENTS
-            </div>
-          </li>
-        </a>
-        <a href="/payment_transfer">
-          <li class="im-block has-action">
-            <div class="im-photo">
-              <div class="small-user-container">
-                <img class="person-image" src="<%= image_path 'susan.jpg' %>" alt="">
+              <div class="im-content">
+                <h4>
+                  <b>
+                    Message to Robert:
+                  </b>
+                </h4>
+                <p>
+                  Why is there excess cash in the AED operating account?
+                </p>
               </div>
-            </div>
-            <div class="im-content">
-              <h4>
-                <b>
-                  Message to Robert:
-                </b>
-              </h4>
-              <p>
-                Ok, move $20,000.00 to the overnight sweep account
-              </p>
-            </div>
-            <div class="im-time">
-              Today 08:01
-            </div>
-            <div class="im-action">
-              RECOMMENDED ACTION: MAKE TRANSFER
-            </div>
-          </li>
-        </a>
+              <div class="im-time">
+                Today 06:05
+              </div>
+              <div class="im-action">
+                RECOMMENDED ACTION: RESEARCH PAYMENTS
+              </div>
+            </li>
+          </a>
+        <% end %>
+        <% if @transfer %>
+          <a href="/payment_transfer">
+            <li class="im-block has-action">
+              <div class="im-photo">
+                <div class="small-user-container">
+                  <img class="person-image" src="<%= image_path 'susan.jpg' %>" alt="">
+                </div>
+              </div>
+              <div class="im-content">
+                <h4>
+                  <b>
+                    Message to Robert:
+                  </b>
+                </h4>
+                <p>
+                  Ok, move $20,000.00 to the overnight sweep account
+                </p>
+              </div>
+              <div class="im-time">
+                Today 08:01
+              </div>
+              <div class="im-action">
+                RECOMMENDED ACTION: MAKE TRANSFER
+              </div>
+            </li>
+          </a>
+        <% end %>
       </ul>
     </div>
   </div>

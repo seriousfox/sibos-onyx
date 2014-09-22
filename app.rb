@@ -49,7 +49,13 @@ class App < Sinatra::Base
     erb :cfo_dash, :layout => !request.pjax?
   end
 
+  get "/robert/:transfer" do
+    @transfer = params[:transfer]
+    erb :acct_man_dash, :layout => !request.pjax?
+  end
+
   get "/robert" do
+    @transfer = nil
     erb :acct_man_dash, :layout => !request.pjax?
   end
 
