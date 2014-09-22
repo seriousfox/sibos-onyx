@@ -1,7 +1,33 @@
 <div class="app-padding">
-  <div class="row">
+  <div class="col-5">
     <%= partial(:'partials/accounts_summary') %>
-    <section class="alerts">
+    <section class="recommendations">
+      <h3 class="yellow-text">
+        2 Recommendations
+      </h3>
+      <ul class="recommendation-list">
+        <a href="" data-ignore="true">
+          <li>
+            <h3>
+              Make NYC Building Loan INT Pmt today
+            </h3>
+          </li>
+        </a>
+        <a href="" data-ignore="true">
+          <li>
+            <h3>
+              Invest excess cash from AED to USD sweep
+            </h3>
+          </li>
+        </a>
+      </ul>
+      <div class="view-more">
+        View All Recommendations
+      </div>
+    </section>
+  </div>
+  <div class="half">
+  <section class="alerts">
       <div class="alert-notify">
         <h3 class="red-text">6 Alerts</h3>
         <a href="" class="view-more" data-ignore="true">
@@ -57,11 +83,13 @@
             </div>
             <div class="im-action">
               RECOMMENDED ACTION: REPLY
+              <div class="reply"></div>
             </div>
           </li>
         </a>
       </ul>
     </section>
+<<<<<<< HEAD
   </div>
   <div class="row">
     <section class="recommendations">
@@ -90,6 +118,8 @@
         View All Recommendations
       </div>
     </section>
+=======
+>>>>>>> small fixes
     <section class="info-tables">
       <div class="half">
         <%= partial(:'partials/currency_table') %>

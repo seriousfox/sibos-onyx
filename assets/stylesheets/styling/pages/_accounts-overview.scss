@@ -1,6 +1,5 @@
 .accounts-summary {
   @extend %clearfix;
-  @include span-columns(5);
   .overview-accounts {
     @extend %clearfix;
     text-align: right;

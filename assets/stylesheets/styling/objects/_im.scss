@@ -34,3 +34,16 @@
     }
   }
 }
+
+.reply {
+  position: absolute;
+  right: $padding-base;
+  top: $padding-base/2;
+  border-radius: $border-base-radius;
+  border: 1px solid $border-ice-blue;
+  padding: $padding-base/4 $padding-base $padding-base/4 $padding-base;
+  background-color: $transparent-panel;
+  font-size: rem(12px);
+
+
+}

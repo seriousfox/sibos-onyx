@@ -1,7 +1,23 @@
 <div class="app-padding">
-
-  <div class="row">
+  <div class="col-5">
     <%= partial(:'partials/accounts_summary') %>
+    <div class="payment-spikes">
+      <h3 class="yellow-text">
+        Payment "Spike"
+      </h3>
+      <ul class="payment-spike-list">
+        <li>
+          <h3>
+            Payment to Vendor #1234 for $110,050.25
+          </h3>
+          <h4>Processed: <span>20/09/2014</span></h4>
+          <h4>Approved: <span>21/09/2014</span></h4>
+          <h4>Recieved: <span>22/09/2014</span></h4>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="half">
     <div class="alerts">
       <div class="alert-notify">
         <h3 class="red-text">7 Alerts</h3>
@@ -33,6 +49,7 @@
                   <img class="person-image" src="<%= image_path 'susan.jpg' %>" alt="">
                 </div>
               </div>
+
               <div class="im-content">
                 <h4>
                   <b>
@@ -67,7 +84,7 @@
                   </b>
                 </h4>
                 <p>
-                  Ok, move $20,000.00 to the overnight sweep account
+                  Ok, move $10,000.00 to the overnight sweep account
                 </p>
               </div>
               <div class="im-time">
@@ -81,22 +98,6 @@
         <% end %>
       </ul>
     </div>
-  </div>
-
-  <div class="payment-spikes">
-    <h3 class="yellow-text">
-      Payment "Spike"
-    </h3>
-    <ul class="payment-spike-list">
-      <li>
-        <h3>
-          Payment to Vendor #1234 for $110,050.25
-        </h3>
-        <h4>Processed: <span>20/09/2014</span></h4>
-        <h4>Approved: <span>21/09/2014</span></h4>
-        <h4>Recieved: <span>22/09/2014</span></h4>
-      </li>
-    </ul>
   </div>
   <%= partial(:'partials/dashboards_bg') %>
   <%= partial(:'partials/robert') %>
