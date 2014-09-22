@@ -24,7 +24,7 @@
 .show-voice {
   width: 100%;
   position: absolute;
-  top: 0;
+  top: rem(20px);
   z-index: 99;
   @include animation(wipe 4s ease);
   @include animation-fill-mode(forwards);

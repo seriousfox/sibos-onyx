@@ -26,6 +26,9 @@
 }
 .im-block {
   background-image: image-url('background/voice.svg');
+  background-size: auto 60%;
+  background-repeat: repeat-x;
+  background-position: center;
   border: 1px solid rgba($ice-blue, 0);
   &:hover{
     background-color: rgba($ice-blue, 0.4);
