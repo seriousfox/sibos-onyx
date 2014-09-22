@@ -4,11 +4,15 @@
   li {
     @include span-columns(6);
     @include omega(2n);
+    @include transition(box-shadow .2s);
     height:150px;
     background:$transparent-panel;
     border: 1px solid $border-teal;
     margin-bottom: 10px;
     padding:20px;
+    &:hover {
+      box-shadow: inset 0px 0px 8px 0px rgba(44, 254, 251, 0.86);
+    }
     &.ui-draggable-dragging {
       @include animation(pulse-shadow 2s ease-in-out infinite);
     }
