@@ -34,10 +34,10 @@
           <label>Amount:</label>
         </div>
         <div class="payment-rest select-currency">
-          <input type="number">
+          <input type="number" value="12000.00">
           <div class="styled-select">
             <select name="" id="">
-              <option value="">USD</option>
+              <option value="" selected>USD</option>
               <option value="">GBP</option>
               <option value="">CAD</option>
               <option value="">AED</option>
@@ -63,7 +63,15 @@
           <label>Remarks:</label>
         </div>
         <div class="payment-rest">
-          <textarea name="" id="" cols="30" rows="20"></textarea>
+          <textarea name="" id="" cols="30" rows="20">Moving cash to USD sweep account</textarea>
+        </div>
+        <div class="row checkbox-row">
+          <div class="styled-checkbox">
+            <input type="checkbox" name="spike" id="spike" class="styled-checkbox spike">
+            <label for="spike">
+              Spike (trace) this payment
+            </label>
+          </div>
         </div>
         <div class="button-container">
           <a href="" class="button" id="submit-payment" data-ignore="true">

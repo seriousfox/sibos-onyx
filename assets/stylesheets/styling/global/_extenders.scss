@@ -12,6 +12,7 @@
   display: block;
   clear: both;
   float: left;
+  position: relative;
   &:after {
     content: "";
     display: table;
