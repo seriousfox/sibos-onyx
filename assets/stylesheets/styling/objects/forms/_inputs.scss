@@ -146,18 +146,21 @@ $align-center-minus: - rem(30px)/2 - rem(5px);
       top: 0;
       height: rem(30px);
       width: rem(30px);
-      color: $teal;
+      color: $ice-blue-softer;
       background: transparent;
-      padding-left: rem(6px);
+      text-align: center;
     }
     &:hover:after {
       opacity: 0.5;
+      box-shadow: $small-teal-glow;
     }
   }
   input[type=checkbox]:checked + label:after {
     opacity: 1;
-    background: $transparent-panel;
+    background: $teal-panel;
     border-radius: $border-base-radius;
+    border: 1px solid $ice-blue;
+    box-shadow: $small-teal-glow;
   }
 }
 
@@ -181,7 +184,9 @@ $align-center-minus: - rem(30px)/2 - rem(5px);
   &.active {
     background-color: $teal-panel;
     @include transform(scale(1.05,1.05));
+    border: 1px solid $ice-blue;
     margin-right: $padding-base/4;
+    box-shadow: $small-teal-glow;
   }
 }
 .actions {
@@ -201,5 +206,6 @@ $align-center-minus: - rem(30px)/2 - rem(5px);
   &:hover {
     background-color: rgba($teal, 0.7);
     box-shadow: $small-teal-glow;
+    border: 1px solid $ice-blue;
   }
 }

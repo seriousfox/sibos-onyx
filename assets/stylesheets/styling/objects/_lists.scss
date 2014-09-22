@@ -12,9 +12,10 @@
     @extend %transition-fast;
     background: $transparent-panel;
     padding: $padding-base;
-    border: 1px solid $border-ice-blue;
+    border: 1px solid rgba($ice-blue,0.4);
     &:hover {
       background-color: $teal-panel;
+      border: 1px solid rgba($ice-blue,1);
       @include transform(scale(1.03,1.03));
       box-shadow: $small-teal-glow;
     }
@@ -105,11 +106,13 @@
 li {
   &.red {
     background: $red-panel;
+    border: 1px solid rgba($orange,0);
   }
   &.red:hover {
     background-color: rgba($red, 0.6);
     @include transform(scale(1.03,1.03));
     box-shadow: $small-orange-glow;
+    border: 1px solid rgba($orange,1);
   }
   &.im-block {
     background-color: $ice-panel;

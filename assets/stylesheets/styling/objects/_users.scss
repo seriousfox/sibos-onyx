@@ -99,6 +99,7 @@
 
     &:hover {
       box-shadow: $teal-glow;
+      border: 1px solid rgba($ice-blue, 1);
     }
   }
   &.active {
