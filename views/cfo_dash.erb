@@ -3,7 +3,7 @@
     <%= partial(:'partials/accounts_summary') %>
     <section class="recommendations">
       <h3 class="yellow-text">
-        2 Recommendations
+        <%= @payment ? '1 Recommendation' : '2 Recommendations' %>
       </h3>
       <ul class="recommendation-list">
         <a href="" data-ignore="true">
@@ -13,6 +13,7 @@
             </h3>
           </li>
         </a>
+        <% unless @payment %>
         <a href="" data-ignore="true">
           <li>
             <h3>
@@ -20,6 +21,7 @@
             </h3>
           </li>
         </a>
+        <% end %>
       </ul>
       <div class="view-more">
         View All Recommendations
@@ -89,37 +91,6 @@
         </a>
       </ul>
     </section>
-<<<<<<< HEAD
-  </div>
-  <div class="row">
-    <section class="recommendations">
-      <h3 class="yellow-text">
-        <%= @payment ? '1 Recommendation' : '2 Recommendations' %>
-      </h3>
-      <ul class="recommendation-list">
-        <a href="" data-ignore="true">
-          <li>
-            <h3>
-              Make NYC Building Loan INT Pmt today
-            </h3>
-          </li>
-        </a>
-        <% unless @payment %>
-        <a href="" data-ignore="true">
-          <li>
-            <h3>
-              Invest excess cash from AED to USD sweep
-            </h3>
-          </li>
-        </a>
-        <% end %>
-      </ul>
-      <div class="view-more">
-        View All Recommendations
-      </div>
-    </section>
-=======
->>>>>>> small fixes
     <section class="info-tables">
       <div class="half">
         <%= partial(:'partials/currency_table') %>
